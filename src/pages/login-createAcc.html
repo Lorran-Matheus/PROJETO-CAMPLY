@@ -1,0 +1,65 @@
+<section id="login-createAcc" class="content-login-createAcc">
+<form action="#" method="get" id="form__register" class="login__main">
+        
+        <label>
+            <input class="field__style mt-2 mb-3 medium-text" 
+            type="text" 
+            name="userName" 
+            placeholder="Nome / Razão social">
+        </label>
+        <span id="userNameError" class="error"></span>
+
+        <div class="close-inputs">
+            <label>
+                <input class="field__style mt-2 mb-3 medium-text" 
+                maxlength="14" 
+                type="tel" 
+                name="tel" 
+                placeholder="Telefone">
+            </label>
+            <span id="telefoneError" class="error"></span>
+
+            <label>
+                <input class="field__style mt-2 mb-3 medium-text" 
+                maxlength="14" 
+                type="number" 
+                name="cpf" 
+                maxlength="11" 
+                placeholder="CPF">
+            </label>
+            <span id="cpfError" class="error"></span>
+        </div>
+
+        <label>
+            <input class="field__style mt-2 mb-3 medium-text" 
+            type="email" 
+            name="email" 
+            placeholder="E-mail">
+        </label>
+
+        <label class="password__container">
+            <input class="field__style mt-3 mb-2 medium-text" 
+            type="password" 
+            name="password" 
+            placeholder="Criar uma senha">
+            <div class="large-text field__eye bi bi-eye-fill"></div>
+        </label>
+        <span id="passwordError" class="error"></span>
+
+        <label class="password__container">
+            <input class="field__style mt-3 mb-2 medium-text" 
+            type="password" 
+            name="password" 
+            placeholder="Digite a senha novamente">
+            <div class="large-text field__eye bi bi-eye-fill"></div>
+        </label>
+        <span id="passwordAgainError" class="error"></span>
+
+
+        <button class="submit btn__style-light btn">Confirmar</button>
+        
+        <label class="check__area pt-3 pb-5">
+            <input type="checkbox"> Manter conectado
+        </label>
+    </form>
+</section>

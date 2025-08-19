@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+@use 'mixin' as *;
+
+@include media-break-min(medium){
+    #toggle-theme{
+        width: 50vw;
+    }
+}

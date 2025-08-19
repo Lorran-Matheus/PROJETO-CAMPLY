@@ -1,0 +1,19 @@
+{
+  "name": "projeto-camply",
+  "version": "1.0.0",
+  "description": "Projeto para prática de fetch e pré processador sass",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "sass -w src/assets/scss/main.scss:src/assets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lorran-Matheus/camply.git#main"
+  },
+  "author": "Lorran Matheus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lorran-Matheus/camply/issues"
+  },
+  "homepage": "https://github.com/Lorran-Matheus/camply/tree/main#readme"
+}

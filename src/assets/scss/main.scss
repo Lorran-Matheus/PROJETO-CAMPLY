@@ -1,0 +1,134 @@
+@use './abstracts' as *;
+@use './base' as *;
+@use './components' as *;
+@use './layout' as *;
+@use './theme/darkMode' as *;
+@use './at-rule' as *;
+
+.content-login{
+    @include justify-center;
+    flex-direction: column;
+    max-height: 100%;
+
+    @media screen and (min-width: 769px) {
+        height: 100vh;
+    }
+}
+
+.logo__container{
+    // position: relative;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    .login__logo {
+        width: 12rem;
+        position: relative;
+        z-index: -3;
+    }
+
+    @media screen and (min-width: 769px) {
+        &{
+            justify-content: flex-start;
+            @include desktopLoginWidth;
+        }
+    }
+}
+
+.login__container {
+    @include justify-center;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    position: relative;
+    bottom: 2rem;
+
+    p{
+        align-self: flex-start;
+        text-align: justify;
+    }
+
+    .login__header {
+        @include mobileLoginWidth;
+        @include justify-center;
+        flex-direction: column;
+
+
+
+        @media screen and (min-width: 769px) {
+            padding: 0;
+            margin: 0;
+            min-width: 18rem;
+
+            &{
+                @include desktopLoginWidth;
+            }
+        }
+    }
+
+    .login__main {
+        @include justify-center;
+        flex-direction: column;
+
+        .field__style {
+            @include mobileLoginWidth;
+        }
+
+        .forget {
+            align-self: flex-end;
+        }
+
+        .submit {
+            @include mobileLoginWidth;
+        }
+
+        .check__area {
+            align-self: flex-start;
+        }
+
+        @media screen and (min-width: 769px) {
+            & {
+                @include desktopLoginWidth;
+            }
+
+            &>label {
+                width: 18rem;
+            }
+
+            .field__style {
+                @include desktopLoginWidth;
+            }
+
+            .password__container {
+                @include desktopLoginWidth
+            }
+
+            .forget {
+                align-self: flex-end;
+            }
+
+            .submit {
+                @include desktopLoginWidth;
+            }
+
+        }
+    }
+
+    .login__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1.5rem;
+        @include mobileLoginWidth
+    }
+
+    @media screen and (min-width: 769px) {
+        padding: 0;
+        width: 50vw;
+        height: 100vh;
+
+        .login__footer{
+            @include desktopLoginWidth;
+        }
+    }
+}

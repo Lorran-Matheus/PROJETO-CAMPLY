@@ -1,0 +1,59 @@
+// Variaveis Globais
+$primary-text-color: #000000;
+$secondary-text-color: #ffffff;
+$link-color: #0105D3;
+$bg-primary-color: #ffffff;
+$bg-linear-login: linear-gradient(180deg, #001C78 38%, #0105D3 100%);
+$btn-bg-style: #000C8C; 
+
+$bg-input-style: #D9D9D9;
+$text-color-input-style: #090909;
+
+:root[data-theme="light"]{
+    --primary-text-color: #{$primary-text-color};
+    --secondary-text-color: #{$secondary-text-color};
+    --bg-primary-color: #{$bg-primary-color};
+    --bg-linear-login: #{$bg-linear-login};
+    --bg-input-style: #{$bg-input-style};
+    --btn-text-color: #{$secondary-text-color};
+    --btn-bg-style: #{$btn-bg-style};
+    --text-color-input: #{$text-color-input-style};
+    --link-color: #{$link-color};
+}
+
+// dark-mode
+$primary-text-color: #F1F1F1;
+$bg-primary-color: #021422;
+$link-color: #00ADFF;
+$btn-bg-style: #0666A1;
+
+
+:root[data-theme="dark"]{
+    --primary-text-color: #{$primary-text-color};
+    --secondary-text-color: #{$secondary-text-color};
+    --bg-primary-color: #{$bg-primary-color};
+    --bg-linear-login: #{$bg-linear-login};
+    --bg-input-style: #{$bg-input-style};
+    --btn-text-color: #{$secondary-text-color};
+    --btn-bg-style: #{$btn-bg-style};
+    --text-color-input: #{$text-color-input-style};
+    --link-color: #{$link-color};
+}
+
+$font-sizes: (
+  xsmall-text: 0.6rem,
+  small-text: 0.8rem,
+  medium-text: 1rem,
+  large-text: 1.5rem,
+  xlarge-text: 2rem,
+  xxlarge-text: 2.5rem
+);
+
+$text-aligns: (
+  align-center: center,
+  align-start: start,
+  align-end: end,
+  align-justify: justify,
+  align-left: left,
+  align-right: right,
+);

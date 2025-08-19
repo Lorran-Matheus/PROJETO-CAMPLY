@@ -1,0 +1,107 @@
+@use '../abstracts' as *;
+@use '../at-rule' as *;
+
+//               loginLayoutMobile
+.header__login {
+    width: 100vw;
+    max-width: 100%;
+    height: 30vh;
+    padding: 2rem;
+    z-index: -2;
+
+    background-image: url(/src/assets/img/img-bg-login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        max-width: 100%;
+        height: 30vh;
+        opacity: .75;
+        background: var(--bg-linear-login);
+    }
+    
+    @media screen and (min-height: 701px){
+        &{
+            height: 35vh;
+        }
+
+        &::before{
+            height: 35vh;
+        }
+    }
+//              loginLayoutDesktop
+    @media screen and (min-width: 769px) {
+        width: 50vw; // + width (.login__container) = 100vw
+        height: 100vh;
+        color: white;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        flex-direction: column;
+
+        &::before{
+            width: 50vw; // mesmo tamanho do elemento pai
+            height: 100vh;
+        }
+    }
+
+}
+
+.header__container{
+    padding: 2rem;
+    z-index: 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        width: 11rem;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: 769px) {
+        &{
+        padding: 2rem;
+        position: relative;
+        top: 4rem;
+        z-index: 10;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+        img{
+        width: 16rem;
+        }
+    }
+
+    @media screen and (max-height: 700px){
+        & img{
+            width: 8rem;
+        }
+    }
+}
+
+.header__text{
+    margin-top: 2rem;
+    width: 21rem;
+
+    @include justify-center;
+    flex-direction: column;
+    gap: 2rem;
+}

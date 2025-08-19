@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+@use '../at-rule/' as *;
+
+//inputs
+.field__style{
+    border: none;
+    padding: 1rem;
+    background-color: var(--bg-input-style);
+    
+    &::placeholder{
+        color: var(--text-color-input);
+    }
+}
+
+//input password 
+.password__container{ 
+    position: relative;
+    @include justify-center;
+
+    .field__eye{
+        color: #000000; 
+        position: absolute;
+        right: .5rem;
+        opacity: .5;
+    }
+
+    @media screen and (min-width: 769px) {
+        &{
+            width: 5rem;
+        }
+    }
+}

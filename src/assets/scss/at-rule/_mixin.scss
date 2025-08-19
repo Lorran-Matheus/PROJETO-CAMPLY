@@ -1,0 +1,39 @@
+@use '../abstracts';
+@use 'sass:map';
+//media
+$breakpoints: (
+    xsmall: 0,
+    small: 576px,
+    medium: 769px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1400px,
+);
+
+@mixin media-break-min($breakpoint){
+    $width: map.get($breakpoints, $breakpoint);
+
+    @media screen and (min-width: $width){
+        @content;
+    }
+}
+
+// displays
+@mixin justify-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Responsividade
+@mixin desktopLoginWidth{
+  width: 30vw;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+
+@mixin mobileLoginWidth{
+  width: 70vw;
+  min-width: 18rem;
+  max-width: 30rem;
+}

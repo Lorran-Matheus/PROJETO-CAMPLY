@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+// Margens
+@for $i from 1 through 5 {
+  .m-#{$i} {
+    margin: #{$i * .25}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i * .25}rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i * .25}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i * .25}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i * .25}rem;
+  }
+}
+
+// Padding
+@for $i from 1 through 5 {
+  .p-#{$i} {
+    padding: #{$i * .25}rem;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i * .25}rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i * .25}rem;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i * .25}rem;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i * .25}rem;
+  }
+}
+
+@each $class, $size in $font-sizes {
+  .#{$class} {
+    font-size: $size;
+  }
+}
+
+@each $class, $size in $text-aligns {
+  .#{$class} {
+    text-align: $size;
+  }
+}
