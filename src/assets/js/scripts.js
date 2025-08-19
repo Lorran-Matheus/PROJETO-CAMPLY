@@ -1,5 +1,5 @@
 function loadPage(pageName) {
-  const path = `pages/${pageName}.html`;
+  const path = `src/pages/${pageName}.html`;
 
   fetch(path)
     .then(response => {

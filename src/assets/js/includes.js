@@ -23,14 +23,14 @@ function includeComponent(location, desktopPath, mobilePath) {
 document.addEventListener("DOMContentLoaded", () => {
   includeComponent(
     "pageLayout",
-    "components/loginLayoutDesktop.html",
-    "components/loginLayoutMobile.html"
+    "src/components/loginLayoutDesktop.html",
+    "src/components/loginLayoutMobile.html"
   );
 
   includeComponent(
     "navbar",
-    "components/navbarDesktop.html",
-    "components/navbarMobile.html"
+    "src/components/navbarDesktop.html",
+    "src/components/navbarMobile.html"
   );
 });
 
@@ -43,14 +43,14 @@ window.addEventListener("resize", () => {
   resizeTimeout = setTimeout(() => {
     includeComponent(
       "pageLayout",
-      "components/loginLayoutDesktop.html",
-      "components/loginLayoutMobile.html"
+      "src/components/loginLayoutDesktop.html",
+      "src/components/loginLayoutMobile.html"
     );
 
     includeComponent(
       "navbar",
-      "components/navbarDesktop.html",
-      "components/navbarMobile.html"
+      "src/components/navbarDesktop.html",
+      "src/components/navbarMobile.html"
     );
   }, 300);
 });
