@@ -5,12 +5,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-/dist/
-/build/
-/out/
-/public/css/   # caso você compile SCSS -> CSS nessa pasta
-
-
 *.css.map
 *.sass-cache
 .sass-cache/
