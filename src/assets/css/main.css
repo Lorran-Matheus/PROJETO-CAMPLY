@@ -23,90 +23,6 @@
   --link-color: #00ADFF;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (min-width: 769px) {
-  body {
-    flex-direction: row;
-  }
-}
-
-main {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-a {
-  color: var(--link-color);
-}
-a:hover {
-  opacity: 0.7;
-}
-a:active {
-  filter: saturate(2);
-  opacity: 1;
-}
-
-html, body, div, span,
-h1, h2, h3, h4, h5, h6, p,
-ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-html {
-  background-color: var(--bg-primary-color);
-  color: var(--primary-text-color);
-  font-family: "Inter";
-  height: 100vh;
-  width: 100vw;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.btn__style {
-  border: none;
-  padding: 0.6rem;
-  background-color: var(--btn-bg-style);
-  color: var(--btn-text-color);
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
-#toggle-theme {
-  position: relative;
-  width: 100vw;
-  top: 0rem;
-  font-size: 2.4rem;
-  right: 0;
-  display: flex;
-  padding: 0.8rem 0.8rem 0;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-end;
-}
-#toggle-theme:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-@media screen and (min-width: 769px) {
-  #toggle-theme {
-    padding: 2rem 2rem 0 0;
-    font-size: 2rem;
-    top: 0;
-  }
-}
-
 .m-1 {
   margin: 0.25rem;
 }
@@ -356,10 +272,274 @@ html {
 }
 
 @media screen and (min-width: 769px) {
-  #toggle-theme {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-login {
+    height: 100vh;
+  }
+  .logo__container {
+    top: -10rem;
     width: 50vw;
   }
+  #toggle-theme {
+    font-size: 2rem;
+  }
+  .content-login-createAcc {
+    width: 50vw;
+  }
+  .createAcc__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .createAcc__header {
+    width: 70vw;
+    min-width: 18rem;
+    max-width: 30rem;
+  }
+  .createAcc__label {
+    width: 100%;
+    min-width: 17rem;
+    max-width: 30rem;
+    align-self: flex-start;
+  }
+  .createAcc__input {
+    align-self: flex-start;
+    width: 100%;
+  }
 }
+@media screen and (min-height: 576px) {
+  .logo__container {
+    height: 8rem;
+    top: 0;
+  }
+  .logo__container img {
+    top: -4rem;
+  }
+  #toggle-theme {
+    z-index: 10;
+    top: 4rem;
+    left: -1rem;
+    padding: 1rem;
+  }
+}
+@media screen and (min-height: 769px) and (min-width: 992px) {
+  .logo__container {
+    height: 4rem;
+    top: -10rem;
+  }
+  .logo__container img {
+    top: -4rem;
+  }
+  #toggle-theme {
+    z-index: 10;
+    top: -6rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-height: 576px) {
+  #toggle-theme {
+    top: 0;
+  }
+}
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  background-color: var(--bg-primary-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+html {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--primary-text-color);
+}
+
+#toggle-theme {
+  font-size: 2.4rem;
+}
+
+.field__style::placeholder {
+  color: var(--text-color-input);
+}
+
+.password__container .field__eye {
+  color: #000000;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.btn__style {
+  border: none;
+  padding: 0.6rem;
+  background-color: var(--btn-bg-style);
+  color: var(--btn-text-color);
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#toggle-theme {
+  padding: 1rem;
+  position: relative;
+  left: -1rem;
+  max-width: 4rem;
+  align-self: flex-end;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+#toggle-theme:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.field__style {
+  border: none;
+  padding: 1rem;
+  background-color: var(--bg-input-style);
+}
+.field__style::placeholder {
+  color: var(--text-color-input);
+}
+.field__style:hover {
+  box-shadow: inset -0.5px -0.5px 3px var(--btn-bg-style), inset 0.5px 0.5px 3px var(--btn-bg-style);
+  filter: brightness(1.1);
+}
+.field__style:focus {
+  filter: brightness(1.1);
+}
+
+.password__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.password__container .field__eye {
+  color: #000000;
+  position: absolute;
+  right: 0.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.password__container .field__eye:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 769px) {
+  .password__container {
+    width: 5rem;
+  }
+}
+
+a {
+  color: var(--link-color);
+}
+a:hover {
+  opacity: 0.7;
+}
+a:active {
+  filter: saturate(2);
+  opacity: 1;
+}
+
+.logo__container {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+}
+.logo__container .login__logo {
+  width: 12rem;
+  position: relative;
+  z-index: -3;
+}
+.logo__container .link__logo {
+  max-width: 100%;
+  justify-self: flex-end;
+  position: relative;
+  top: -7rem;
+  right: 2rem;
+}
+
+.content-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 100%;
+}
+@media screen and (min-width: 769px) {
+  .content-login {
+    width: 50vw;
+    height: 100vh;
+  }
+}
+
+.login-createAcc {
+  width: 50vw;
+}
+
+.content-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 100%;
+}
+@media screen and (min-width: 769px) {
+  .content-login {
+    width: 50vw;
+    height: 100vh;
+  }
+}
+
+.login-createAcc {
+  width: 100vw;
+}
+
+.content-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 100%;
+}
+@media screen and (min-width: 769px) {
+  .content-login {
+    width: 50vw;
+    height: 100vh;
+  }
+}
+
+.login-createAcc {
+  width: 50vw;
+}
+
 .header__login {
   width: 100vw;
   max-width: 100%;
@@ -446,87 +626,29 @@ html {
   margin-top: 2rem;
   width: 21rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 2rem;
-}
-
-.field__style {
-  border: none;
-  padding: 1rem;
-  background-color: var(--bg-input-style);
-}
-.field__style::placeholder {
-  color: var(--text-color-input);
-}
-
-.password__container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.password__container .field__eye {
-  color: #000000;
-  position: absolute;
-  right: 0.5rem;
-  opacity: 0.5;
-}
-@media screen and (min-width: 769px) {
-  .password__container {
-    width: 5rem;
-  }
-}
-
-.content-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-height: 100%;
-}
-@media screen and (min-width: 769px) {
-  .content-login {
-    height: 100vh;
-  }
-}
-
-.logo__container .login__logo {
-  width: 12rem;
-  position: relative;
-  z-index: -3;
-}
-@media screen and (min-width: 769px) {
-  .logo__container {
-    justify-content: flex-start;
-    width: 30vw;
-    min-width: 20rem;
-    max-width: 30rem;
-  }
 }
 
 .login__container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding-bottom: 3rem;
   position: relative;
-  bottom: 2rem;
-}
-.login__container p {
-  align-self: flex-start;
-  text-align: justify;
+  bottom: 1rem;
 }
 .login__container .login__header {
-  width: 70vw;
-  min-width: 18rem;
+  width: 30vw;
+  min-width: 20rem;
   max-width: 30rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 @media screen and (min-width: 769px) {
   .login__container .login__header {
@@ -535,28 +657,28 @@ html {
     min-width: 18rem;
   }
   .login__container .login__header {
-    width: 30vw;
-    min-width: 20rem;
+    width: 70vw;
+    min-width: 18rem;
     max-width: 30rem;
   }
 }
 .login__container .login__main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .login__container .login__main .field__style {
-  width: 70vw;
-  min-width: 18rem;
+  width: 30vw;
+  min-width: 20rem;
   max-width: 30rem;
 }
 .login__container .login__main .forget {
   align-self: flex-end;
 }
 .login__container .login__main .submit {
-  width: 70vw;
-  min-width: 18rem;
+  width: 30vw;
+  min-width: 20rem;
   max-width: 30rem;
 }
 .login__container .login__main .check__area {
@@ -564,29 +686,29 @@ html {
 }
 @media screen and (min-width: 769px) {
   .login__container .login__main {
-    width: 30vw;
-    min-width: 20rem;
+    width: 70vw;
+    min-width: 18rem;
     max-width: 30rem;
   }
   .login__container .login__main > label {
     width: 18rem;
   }
   .login__container .login__main .field__style {
-    width: 30vw;
-    min-width: 20rem;
+    width: 70vw;
+    min-width: 18rem;
     max-width: 30rem;
   }
   .login__container .login__main .password__container {
-    width: 30vw;
-    min-width: 20rem;
+    width: 70vw;
+    min-width: 18rem;
     max-width: 30rem;
   }
   .login__container .login__main .forget {
     align-self: flex-end;
   }
   .login__container .login__main .submit {
-    width: 30vw;
-    min-width: 20rem;
+    width: 70vw;
+    min-width: 18rem;
     max-width: 30rem;
   }
 }
@@ -596,21 +718,78 @@ html {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
-  width: 70vw;
-  min-width: 18rem;
+  width: 30vw;
+  min-width: 20rem;
   max-width: 30rem;
 }
 @media screen and (min-width: 769px) {
   .login__container {
     padding: 0;
     width: 50vw;
-    height: 100vh;
+  }
+  .login__container .login__text {
+    align-self: flex-start;
+    text-align: left;
   }
   .login__container .login__footer {
-    width: 30vw;
-    min-width: 20rem;
+    width: 70vw;
+    min-width: 18rem;
     max-width: 30rem;
   }
+}
+
+.content-login-createAcc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.createAcc__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.createAcc__header {
+  width: 30vw;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+.createAcc__label {
+  width: 100%;
+  min-width: 17rem;
+  max-width: 30rem;
+  align-self: flex-start;
+}
+.createAcc__input {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.form__createAcc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  min-width: 18rem;
+  max-width: 40rem;
+  padding: 0.3rem;
+}
+.form__createAcc .close-inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.form__createAcc .close-inputs-tel {
+  width: 90%;
+}
+.form__createAcc .close-inputs-cpf {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

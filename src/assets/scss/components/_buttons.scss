@@ -1,37 +1,36 @@
 @use '../abstracts' as *;
 
-.btn__style{
-    border: none;
-    padding: .6rem;
-    background-color: var(--btn-bg-style);
-    color: var(--btn-text-color);
+.btn {
+    &__style {
+        border: none;
+        padding: .6rem;
+        background-color: var(--btn-bg-style);
+        color: var(--btn-text-color);
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
 }
 
-.btn:hover{
-    cursor: pointer;
-}
-
-#toggle-theme{
+#toggle-theme {
+    padding: 1rem;
     position: relative;
-    width: 100vw;
-    top: 0rem;
-    font-size: 2.4rem;
-    right: 0;
+    left: -1rem;
+    max-width: 4rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+
     display: flex;
-    padding: .8rem 0.8rem 0;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
 
-    &:hover{
+    &:hover {
         opacity: .8;
         cursor: pointer;
     }
 
-    @media screen and (min-width: 769px){
-        padding: 2rem 2rem 0 0;
-        font-size: 2rem;
-        top: 0;
-    }
 }

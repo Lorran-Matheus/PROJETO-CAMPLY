@@ -57,3 +57,13 @@ $text-aligns: (
   align-left: left,
   align-right: right,
 );
+
+
+$breakpoints: (
+    xsmall: 0px,
+    small: 576px,
+    medium: 769px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1400px,
+);

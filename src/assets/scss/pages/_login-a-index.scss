@@ -1,0 +1,96 @@
+@use '../abstracts/' as *;
+@use '../at-rule/' as *;
+
+.login__container {
+    @include displayFlex(column, center, center);
+    padding-bottom: 3rem;
+    position: relative;
+    bottom: 1rem;
+
+    .login__header {
+        @include mobileLoginWidth;
+        @include displayFlex(column, center, center);
+
+
+
+        @media screen and (min-width: 769px) {
+            padding: 0;
+            margin: 0;
+            min-width: 18rem;
+
+            & {
+                @include desktopLoginWidth;
+            }
+        }
+    }
+
+    .login__main {
+        @include displayFlex(column, center, center);
+
+        .field__style {
+            @include mobileLoginWidth;
+        }
+
+        .forget {
+            align-self: flex-end;
+        }
+
+        .submit {
+            @include mobileLoginWidth;
+        }
+
+        .check__area {
+            align-self: flex-start;
+        }
+
+        @media screen and (min-width: 769px) {
+            & {
+                @include desktopLoginWidth;
+            }
+
+            &>label {
+                width: 18rem;
+            }
+
+            .field__style {
+                @include desktopLoginWidth;
+            }
+
+            .password__container {
+                @include desktopLoginWidth
+            }
+
+            .forget {
+                align-self: flex-end;
+            }
+
+            .submit {
+                @include desktopLoginWidth;
+            }
+
+        }
+    }
+
+    .login__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1.5rem;
+        @include mobileLoginWidth
+    }
+
+    @media screen and (min-width: 769px) {
+        padding: 0;
+        width: 50vw;
+
+        .login__text {
+            align-self: flex-start;
+            text-align: left;
+        }
+
+        .login__footer {
+            @include desktopLoginWidth;
+        }
+    }
+}

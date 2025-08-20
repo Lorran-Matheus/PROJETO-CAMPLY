@@ -1,0 +1,54 @@
+@use '../abstracts' as *;
+@use '../at-rule/' as *;
+
+.content-login-createAcc {
+    @include displayFlex(column, center, center);
+    padding-bottom: 3rem;
+    position: relative;
+    // width: 100vw;
+}
+
+.createAcc {
+    &__main{
+        @include displayFlex(column, center, center)
+    }
+
+    &__header{
+        @include mobileLoginWidth()
+    }
+
+    &__label {
+        @include mobileLoginWidth($width: 100%, $min-width: 17rem);
+        align-self: flex-start;
+    }
+
+    &__input {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+}
+
+.form__createAcc {
+    @include displayFlex(column, center, center);
+    padding: .3rem;
+    margin: .5rem;
+    min-width: 18rem;
+    max-width: 40rem;
+    padding: 0.3rem;
+    
+    .close-inputs {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        // @include displayFlex(row, space-between, center);
+
+        &-tel {
+            width: 90%;
+        }
+
+        &-cpf {
+            width: 100%;
+        }
+    }
+}

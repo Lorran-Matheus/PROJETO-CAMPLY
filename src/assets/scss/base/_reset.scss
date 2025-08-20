@@ -1,6 +1,5 @@
 @use '../abstracts' as *;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@use '../at-rule/' as *;
 
 html, body, div, span,
 h1, h2, h3, h4, h5, h6, p,
@@ -12,12 +11,15 @@ ol, ul{
 
 html{
 	background-color: var(--bg-primary-color);
-	color: var(--primary-text-color);
-	font-family:  'Inter';
 	height: 100vh;
 	width: 100vw;
 }
 
 * {
 	box-sizing: border-box;
+}
+
+main{
+    max-height: 100vh;
+    max-width: 100vw;
 }

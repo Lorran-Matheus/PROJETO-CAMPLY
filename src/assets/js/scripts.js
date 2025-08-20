@@ -51,17 +51,17 @@ function initRouter() {
     const page = hash || "initial-a-index";
     const logado = localStorage.getItem("logado") === "true"
 
-    // Força user inválido a voltar para a tela de login
-    if (!logado && page !== "login-a-index") {
-      loadPage("login-a-index");
-      location.hash = "#login-a-index"; 
-      return;
-    } 
-    // User válido sai da tela de login para a pagina inicial
-    if (logado && page === "login-a-index"){ 
-      location.hash = "initial-a-index";
-      return;
-    }
+    // // Força user inválido a voltar para a tela de login
+    // if (!logado && page !== "login-a-index") {
+    //   loadPage("login-a-index");
+    //   location.hash = "#login-a-index"; 
+    //   return;
+    // } 
+    // // User válido sai da tela de login para a pagina inicial
+    // if (logado && page === "login-a-index"){ 
+    //   location.hash = "initial-a-index";
+    //   return;
+    // }
     
     loadPage(page); 
   }

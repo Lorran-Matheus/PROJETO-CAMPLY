@@ -1,39 +1,39 @@
-@use '../abstracts';
+@use '../abstracts' as *;
 @use 'sass:map';
-//media
-$breakpoints: (
-    xsmall: 0,
-    small: 576px,
-    medium: 769px,
-    large: 992px,
-    xlarge: 1200px,
-    xxlarge: 1400px,
-);
 
-@mixin media-break-min($breakpoint){
-    $width: map.get($breakpoints, $breakpoint);
+@mixin media-break-min-width($breakpoint) {
+  $width: map.get($breakpoints, $breakpoint);
 
-    @media screen and (min-width: $width){
-        @content;
-    }
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-break-min-height($breakpoint) {
+  $height: map.get($breakpoints, $breakpoint);
+
+  @media screen and (min-height: $height) {
+    @content;
+  }
 }
 
 // displays
-@mixin justify-center{
+@mixin displayFlex($direction: null, $justify: null, $align: null) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 // Responsividade
-@mixin desktopLoginWidth{
-  width: 30vw;
-  min-width: 20rem;
-  max-width: 30rem;
+@mixin mobileLoginWidth($width: 30vw, $min-width: 20rem, $max-width: 30rem) {
+  width: $width;
+  min-width: $min-width;
+  max-width: $max-width;
 }
 
-@mixin mobileLoginWidth{
-  width: 70vw;
-  min-width: 18rem;
-  max-width: 30rem;
+@mixin desktopLoginWidth($width: 70vw, $min-width: 18rem, $max-width: 30rem) {
+  width: $width;
+  min-width: $min-width;
+  max-width: $max-width;
 }

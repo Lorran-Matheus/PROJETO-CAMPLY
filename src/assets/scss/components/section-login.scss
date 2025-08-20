@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+@use '../at-rule/' as *;
+
+.content-login {
+    @include displayFlex(null, center, center);
+    flex-direction: column;
+    max-height: 100%;
+
+    @media screen and (min-width: 769px) {
+        width: 50vw;
+        height: 100vh;
+    }
+}
+
+.login-createAcc{
+    width: 50vw;
+}
