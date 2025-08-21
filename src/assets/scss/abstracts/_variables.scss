@@ -2,42 +2,48 @@
 $primary-text-color: #000000;
 $secondary-text-color: #ffffff;
 $link-color: #0105D3;
-$bg-primary-color: #ffffff;
-$bg-linear-login: linear-gradient(180deg, #001C78 38%, #0105D3 100%);
-$btn-bg-style: #000C8C; 
-
-$bg-input-style: #D9D9D9;
 $text-color-input-style: #090909;
 
-:root[data-theme="light"]{
-    --primary-text-color: #{$primary-text-color};
-    --secondary-text-color: #{$secondary-text-color};
-    --bg-primary-color: #{$bg-primary-color};
-    --bg-linear-login: #{$bg-linear-login};
-    --bg-input-style: #{$bg-input-style};
-    --btn-text-color: #{$secondary-text-color};
-    --btn-bg-style: #{$btn-bg-style};
-    --text-color-input: #{$text-color-input-style};
-    --link-color: #{$link-color};
+$bg-btn-style: #000C8C;
+$bg-primary-color: #ffffff;
+$bg-linear-login: linear-gradient(180deg, #001C78 38%, #0105D3 100%);
+$bg-input-style: #D9D9D9;
+$bg-color-typeCode: #C2C2C2;
+
+
+%variables-theme {
+  --primary-text-color: #{$primary-text-color};
+  --secondary-text-color: #{$secondary-text-color};
+  --link-color: #{$link-color};
+  --text-color-input: #{$text-color-input-style};
+  --bg-btn-style: #{$bg-btn-style};
+  --bg-primary-color: #{$bg-primary-color};
+  --bg-linear-login: #{$bg-linear-login};
+  --bg-input-style: #{$bg-input-style};
+  --bg-color-typeCode: #{$bg-color-typeCode};
+
+  --btn-text-color: #{$secondary-text-color};
 }
 
-// dark-mode
-$primary-text-color: #F1F1F1;
-$bg-primary-color: #021422;
-$link-color: #00ADFF;
-$btn-bg-style: #0666A1;
+:root[data-theme="light"] {
+  @extend %variables-theme;
+}
 
 
-:root[data-theme="dark"]{
-    --primary-text-color: #{$primary-text-color};
-    --secondary-text-color: #{$secondary-text-color};
-    --bg-primary-color: #{$bg-primary-color};
-    --bg-linear-login: #{$bg-linear-login};
-    --bg-input-style: #{$bg-input-style};
-    --btn-text-color: #{$secondary-text-color};
-    --btn-bg-style: #{$btn-bg-style};
-    --text-color-input: #{$text-color-input-style};
-    --link-color: #{$link-color};
+
+:root[data-theme="dark"] {
+  $primary-text-color: #F1F1F1;
+  $link-color: #00ADFF;
+  $bg-btn-style: #0666A1;
+  $bg-primary-color: #021422;
+  $bg-color-typeCode: #ffffff;
+
+  --primary-text-color: #{$primary-text-color};
+  --link-color: #{$link-color};
+  --bg-btn-style: #{$bg-btn-style};
+  --bg-primary-color: #{$bg-primary-color};
+  --bg-color-typeCode: #{$bg-color-typeCode};
+  @extend %variables-theme;
 }
 
 $font-sizes: (
@@ -60,10 +66,10 @@ $text-aligns: (
 
 
 $breakpoints: (
-    xsmall: 0px,
-    small: 576px,
-    medium: 769px,
-    large: 992px,
-    xlarge: 1200px,
-    xxlarge: 1400px,
+  xsmall: 0px,
+  small: 576px,
+  medium: 769px,
+  large: 992px,
+  xlarge: 1200px,
+  xxlarge: 1400px,
 );

@@ -4,7 +4,7 @@
 //inputs
 .field__style{
     border: none;
-    padding: 1rem;
+    padding: .8rem;
     background-color: var(--bg-input-style);
     
     &::placeholder{
@@ -12,7 +12,7 @@
     }
 
     &:hover{
-        box-shadow: inset -.5px -.5px 3px var(--btn-bg-style), inset .5px .5px 3px var(--btn-bg-style);
+        box-shadow: inset -.5px -.5px 3px var(--bg-btn-style), inset .5px .5px 3px var(--bg-btn-style);
         filter: brightness(1.1);
     }
 

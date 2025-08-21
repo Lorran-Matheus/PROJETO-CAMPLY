@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+@use '../at-rule/' as *;
+
+.content-login-typecode {
+    @include displayFlex(column, center, center);
+}
+
+.logo__container__typeCode {
+    @include displayFlex(row,center, center);
+
+    .login__logo.typeCode__img {
+        width: 20rem;
+    }
+}
+
+.typeCode {
+
+    &__main {
+        @include displayFlex(column, center, center);
+        @include mobileLoginWidth(56vw, 18rem, 35rem);
+        gap: .5rem;
+        position: relative;
+        top: 1rem;
+    }
+
+    &__title {
+        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
+    }
+
+    &__container {
+        @include displayFlex(row, center, center);
+        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
+
+        .typeCode__input {
+            margin: .2rem;
+            width: 2rem;
+            height: 2.8rem;
+            aspect-ratio: 1/2;
+            background-color: var(--bg-color-typeCode);
+        }
+    }
+
+    &__paragraph {
+        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
+    }
+
+    &__button {
+        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
+    }
+
+    &__link {
+        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
+        justify-self: flex-start;
+    }
+}

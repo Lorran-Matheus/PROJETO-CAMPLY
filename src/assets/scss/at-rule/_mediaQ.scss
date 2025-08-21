@@ -48,7 +48,7 @@
 }
 
 @include media-break-min-height(small) {
-    .logo__container {
+    .logo__login__container {
         height: 8rem;
         top: 0;
 
@@ -57,7 +57,7 @@
         }
     }
 
-    #toggle-theme {
+    .theme__icon {
         z-index: 10;
         top: 4rem;
         left: -1rem;

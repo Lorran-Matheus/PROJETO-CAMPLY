@@ -1,4 +1,22 @@
 <section id="login-confirmEmail" class="content-login">
-    <h1>teste</h1>
-    <button id="logout" class="btn btn__style">SAIR</button>
+    <span id="toggle-theme" class="bi bi-brightness-high xlarge-text"></span>
+
+    <div class="logo__container logo__container__confirmEmail">
+        <!-- <img class="login__logo" id="current__logo" src="/src/assets/img/logo_light.png" alt="Logo camply"> -->
+        <img class="login__logo logo__confirmEmail" id="current__logo"
+            src="./src/assets/img/logo_dark.png" alt="Logo camply">
+    </div>
+    
+    <div class="confirmEmail__main align-left large-text">
+        <p class="confirmEmail__text large-text">
+            Confirme seu e-mail cadastrado no nosso sistema
+        </p>
+        <label class="confirmEmail__label">
+            <input type="email" class="confirmEmail__input field__style medium-text" placeholder="Digite seu email aqui">
+        </label>
+
+        <p class="link__logo confirmEmail__link medium-text m-1">Já possui uma conta? <a href="#login-a-index">Entrar</a></p>
+        <!-- Atribuir submit a página #login-typeCode no JS -->
+        <a href="#login-typeCode"><button id="submit" class="confirmEmail__btn submit btn btn__style m-1 medium-text">Confirmar</button></a>
+        </div>
 </section>

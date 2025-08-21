@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+@use '../at-rule/' as *;
+
+.logo {
+    &__container__confirmEmail {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__confirmEmail {
+        align-self: center;
+        justify-self: center;
+        top: 4rem;
+    }
+}
+
+.confirmEmail {
+
+    &__main {
+        @include displayFlex(column, space-between, center);
+        @include mobileLoginWidth();
+        gap: 3rem;
+        position: relative;
+        top: 4rem
+
+    }
+
+    &__label{
+        @include mobileLoginWidth();
+    }
+
+    &__input{
+        @include mobileLoginWidth();
+    }
+
+    &__link{
+        align-self: flex-start;
+    }
+
+    &__btn{
+        @include mobileLoginWidth();
+        position: relative;
+        top: -1rem;
+    }
+}

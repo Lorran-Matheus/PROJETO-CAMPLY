@@ -1,26 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-:root[data-theme=light] {
+:root[data-theme=dark], :root[data-theme=light] {
   --primary-text-color: #000000;
   --secondary-text-color: #ffffff;
+  --link-color: #0105D3;
+  --text-color-input: #090909;
+  --bg-btn-style: #000C8C;
   --bg-primary-color: #ffffff;
   --bg-linear-login: linear-gradient(180deg, #001C78 38%, #0105D3 100%);
   --bg-input-style: #D9D9D9;
+  --bg-color-typeCode: #C2C2C2;
   --btn-text-color: #ffffff;
-  --btn-bg-style: #000C8C;
-  --text-color-input: #090909;
-  --link-color: #0105D3;
 }
 
 :root[data-theme=dark] {
   --primary-text-color: #F1F1F1;
-  --secondary-text-color: #ffffff;
-  --bg-primary-color: #021422;
-  --bg-linear-login: linear-gradient(180deg, #001C78 38%, #0105D3 100%);
-  --bg-input-style: #D9D9D9;
-  --btn-text-color: #ffffff;
-  --btn-bg-style: #0666A1;
-  --text-color-input: #090909;
   --link-color: #00ADFF;
+  --bg-btn-style: #0666A1;
+  --bg-primary-color: #021422;
+  --bg-color-typeCode: #ffffff;
 }
 
 .m-1 {
@@ -314,14 +311,14 @@
   }
 }
 @media screen and (min-height: 576px) {
-  .logo__container {
+  .logo__login__container {
     height: 8rem;
     top: 0;
   }
-  .logo__container img {
+  .logo__login__container img {
     top: -4rem;
   }
-  #toggle-theme {
+  .theme__icon {
     z-index: 10;
     top: 4rem;
     left: -1rem;
@@ -390,13 +387,28 @@ a {
   color: var(--link-color);
 }
 
+.typeCode__link {
+  text-decoration: none;
+}
+
 .btn__style {
   border: none;
-  padding: 0.6rem;
-  background-color: var(--btn-bg-style);
+  padding: 0.8rem;
+  background-color: var(--bg-btn-style);
   color: var(--btn-text-color);
 }
 .btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn2__style {
+  border: none;
+  padding: 0.8rem;
+  background-color: var(--link-color);
+  color: var(--btn-text-color);
+}
+.btn2:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -421,14 +433,14 @@ a {
 
 .field__style {
   border: none;
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: var(--bg-input-style);
 }
 .field__style::placeholder {
   color: var(--text-color-input);
 }
 .field__style:hover {
-  box-shadow: inset -0.5px -0.5px 3px var(--btn-bg-style), inset 0.5px 0.5px 3px var(--btn-bg-style);
+  box-shadow: inset -0.5px -0.5px 3px var(--bg-btn-style), inset 0.5px 0.5px 3px var(--bg-btn-style);
   filter: brightness(1.1);
 }
 .field__style:focus {
@@ -498,46 +510,6 @@ a:active {
     width: 50vw;
     height: 100vh;
   }
-}
-
-.login-createAcc {
-  width: 50vw;
-}
-
-.content-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-height: 100%;
-}
-@media screen and (min-width: 769px) {
-  .content-login {
-    width: 50vw;
-    height: 100vh;
-  }
-}
-
-.login-createAcc {
-  width: 100vw;
-}
-
-.content-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-height: 100%;
-}
-@media screen and (min-width: 769px) {
-  .content-login {
-    width: 50vw;
-    height: 100vh;
-  }
-}
-
-.login-createAcc {
-  width: 50vw;
 }
 
 .header__login {
@@ -630,6 +602,10 @@ a:active {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+.logo__login {
+  position: relative;
 }
 
 .login__container {
@@ -738,6 +714,51 @@ a:active {
   }
 }
 
+.logo__container__confirmEmail {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo__confirmEmail {
+  align-self: center;
+  justify-self: center;
+  top: 4rem;
+}
+
+.confirmEmail__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30vw;
+  min-width: 20rem;
+  max-width: 30rem;
+  gap: 3rem;
+  position: relative;
+  top: 4rem;
+}
+.confirmEmail__label {
+  width: 30vw;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+.confirmEmail__input {
+  width: 30vw;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+.confirmEmail__link {
+  align-self: flex-start;
+}
+.confirmEmail__btn {
+  width: 30vw;
+  min-width: 20rem;
+  max-width: 30rem;
+  position: relative;
+  top: -1rem;
+}
+
 .content-login-createAcc {
   display: flex;
   flex-direction: column;
@@ -747,16 +768,21 @@ a:active {
   position: relative;
 }
 
+.logo__create {
+  position: relative;
+}
+
 .createAcc__main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 .createAcc__header {
-  width: 30vw;
-  min-width: 20rem;
-  max-width: 30rem;
+  width: 100%;
+  min-width: 18rem;
+  max-width: 28rem;
 }
 .createAcc__label {
   width: 100%;
@@ -790,6 +816,73 @@ a:active {
 }
 .form__createAcc .close-inputs-cpf {
   width: 100%;
+}
+
+.content-login-typecode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__container__typeCode {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logo__container__typeCode .login__logo.typeCode__img {
+  width: 20rem;
+}
+
+.typeCode__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 56vw;
+  min-width: 18rem;
+  max-width: 35rem;
+  gap: 0.5rem;
+  position: relative;
+  top: 1rem;
+}
+.typeCode__title {
+  width: 52vw;
+  min-width: 16.5rem;
+  max-width: 30rem;
+}
+.typeCode__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 52vw;
+  min-width: 16.5rem;
+  max-width: 30rem;
+}
+.typeCode__container .typeCode__input {
+  margin: 0.2rem;
+  width: 2rem;
+  height: 2.8rem;
+  aspect-ratio: 1/2;
+  background-color: var(--bg-color-typeCode);
+}
+.typeCode__paragraph {
+  width: 52vw;
+  min-width: 16.5rem;
+  max-width: 30rem;
+}
+.typeCode__button {
+  width: 52vw;
+  min-width: 16.5rem;
+  max-width: 30rem;
+}
+.typeCode__link {
+  width: 52vw;
+  min-width: 16.5rem;
+  max-width: 30rem;
+  justify-self: flex-start;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,13 +8,18 @@
     // width: 100vw;
 }
 
+.logo__create{
+    position: relative;
+}
+
 .createAcc {
     &__main{
-        @include displayFlex(column, center, center)
+        @include displayFlex(column, center, center);
+        padding: 2rem;
     }
 
     &__header{
-        @include mobileLoginWidth()
+        @include mobileLoginWidth(100%, 18rem, 28rem)
     }
 
     &__label {

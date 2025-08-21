@@ -3,8 +3,22 @@
 .btn {
     &__style {
         border: none;
-        padding: .6rem;
-        background-color: var(--btn-bg-style);
+        padding: .8rem;
+        background-color: var(--bg-btn-style);
+        color: var(--btn-text-color);
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+
+.btn2{
+    &__style {
+        border: none;
+        padding: .8rem;
+        background-color: var(--link-color);
         color: var(--btn-text-color);
     }
 
