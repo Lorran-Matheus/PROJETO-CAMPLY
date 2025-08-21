@@ -8,10 +8,12 @@ function includeComponent(location, desktopPath, mobilePath) {
   let path;
 
   if (hash === '#login-a-index') {
+    console.log('passou aqui1');
     path = isMobile ? mobilePath : desktopPath;
   }
 
   else if (isMobile && hash.startsWith('#login')) {
+    console.log('passou aqui2');
     if (page) {
       page.classList.remove("pageLayout");
       page.innerHTML = "";
@@ -19,6 +21,7 @@ function includeComponent(location, desktopPath, mobilePath) {
     return;
 
   } else {
+    console.log('passou aqui3');
     path = desktopPath;
   }
 
@@ -40,12 +43,12 @@ function includeComponent(location, desktopPath, mobilePath) {
 document.addEventListener("DOMContentLoaded", () => {
   const hash = window.location.hash.toLowerCase();
   if (hash.startsWith('#login')) {
-  includeComponent(
-    "pageLayout",
-    "src/components/loginLayoutDesktop.html",
-    "src/components/loginLayoutMobile.html"
-  );
-}
+    includeComponent(
+      "pageLayout",
+      "src/components/loginLayoutDesktop.html",
+      "src/components/loginLayoutMobile.html"
+    );
+  }
 
   includeComponent(
     "navbar",
@@ -61,7 +64,7 @@ window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
 
   resizeTimeout = setTimeout(() => {
-    window.location.reload();
+    // window.location.reload();
     includeComponent(
       "pageLayout",
       "src/components/loginLayoutDesktop.html",
