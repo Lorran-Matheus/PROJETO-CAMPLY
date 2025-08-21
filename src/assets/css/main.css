@@ -518,7 +518,7 @@ a:active {
   height: 30vh;
   padding: 2rem;
   z-index: -2;
-  background-image: url(../assets/img/img-bg-login.jpg);
+  background-image: url(../img/img-bg-login.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-origin: border-box;
