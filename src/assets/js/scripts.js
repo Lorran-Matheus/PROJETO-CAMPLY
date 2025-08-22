@@ -1,4 +1,24 @@
 function loadPage(pageName) {
+  const PUBLIC_ROUTES = new Set([
+    'login-a-index',
+    'login-createAcc',
+    'login-confirmEmail',
+    'login-newPass',
+    'login-typeCode'
+  ]);
+
+  const isPublic = PUBLIC_ROUTES.has(pageName);
+
+  // autentifica o token do usuario na pagina atual
+  checkAuth();
+
+  // caso nao tenha, bloqueia logo no início
+  if (!isPublic && !localStorage.getItem('token')) {
+
+    location.hash = '#login-a-index';
+    return;
+  }
+
   const path = `src/pages/${pageName}.html`;
 
   fetch(path)
@@ -8,25 +28,36 @@ function loadPage(pageName) {
     })
     .then(html => {
       document.getElementById("content").innerHTML = html;
-        if (pageName === "login-a-index") { // Aguarda o submit para validar os campos
-          const form = document.querySelector("form");
-          if (form) {
-            form.addEventListener("submit", login);
-          }
-        } else if (pageName !== "login-a-index"){ // Fora de login-a-index, busca button com logout e atribui a function
-          const logoutBtn = document.getElementById("logout");
-          if (logoutBtn) {
-            logoutBtn.addEventListener("click", () => {
-              localStorage.removeItem("logado");
-              location.hash = "#login-a-index";
-            });
-          }
+      if (isPublic) { // Aguarda o submit para validar os campos
+
+        const form = document.querySelector("form");
+        if (form) {
+          form.addEventListener("submit", login);
         }
-      })
+      } else if (!isPublic) { // Fora de login-a-index, busca button com logout e atribui a function
+
+        const logoutBtn = document.getElementById("logout");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", () => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("logado");
+            location.hash = "#login-a-index";
+          });
+        }
+      }
+    })
     .catch(error => {
       document.querySelector("#content").innerHTML = "<p>Página não encontrada.</p>";
       console.error(error);
     });
+}
+
+// retorna user sem token para o login
+function checkAuth() {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    location.hash = "#login-a-index";
+  }
 }
 
 function login(validation) {
@@ -38,7 +69,8 @@ function login(validation) {
   // Simulação de login 
   if (usuario === "admin" && senha === "1234") {
     localStorage.setItem("logado", "true");
-    location.hash = "#initial-a-index"; // Se OK, redireciona a pagina
+    localStorage.setItem("token", "true");
+    location.hash = "#initial-a-index";
   } else {
     alert("Login inválido");
   }
@@ -49,7 +81,7 @@ function initRouter() {
   function render() {
     const hash = location.hash.replace("#", "");
     const page = hash || "initial-a-index";
-    const logado = localStorage.getItem("logado") === "true"
+    // const logado = localStorage.getItem("logado") === "true"
 
     // // Força user inválido a voltar para a tela de login
     // if (!logado && page !== "login-a-index") {
@@ -62,8 +94,8 @@ function initRouter() {
     //   location.hash = "initial-a-index";
     //   return;
     // }
-    
-    loadPage(page); 
+
+    loadPage(page);
   }
 
   window.addEventListener("hashchange", render);
@@ -73,23 +105,24 @@ initRouter();
 
 
 function toggleTheme() {
-  document.getElementById('content').addEventListener('click', function(event) {
-  if(event.target.matches('#toggle-theme')) {
-    
-    const btnToggleTheme = document.getElementById("toggle-theme");
-    const html = document.documentElement;
-    const logo = document.getElementById("current__logo");
-  
-    btnToggleTheme.addEventListener("click", () => {
-      const currentTheme = html.getAttribute("data-theme") || "light";
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      html.setAttribute("data-theme", newTheme);
-  
-      if (newTheme === "dark") {
-        logo.src = "/src/assets/img/logo_dark.png";
-      } else {
-        logo.src = "/src/assets/img/logo_light.png";
-      }
-    });
-  }});
+  document.getElementById('content').addEventListener('click', function (event) {
+    if (event.target.matches('#toggle-theme')) {
+
+      const btnToggleTheme = document.getElementById("toggle-theme");
+      const html = document.documentElement;
+      const logo = document.getElementById("current__logo");
+
+      btnToggleTheme.addEventListener("click", () => {
+        const currentTheme = html.getAttribute("data-theme") || "light";
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", newTheme);
+
+        if (newTheme === "dark") {
+          logo.src = "/src/assets/img/logo_dark.png";
+        } else {
+          logo.src = "/src/assets/img/logo_light.png";
+        }
+      });
+    }
+  });
 }

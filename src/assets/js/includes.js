@@ -8,12 +8,10 @@ function includeComponent(location, desktopPath, mobilePath) {
   let path;
 
   if (hash === '#login-a-index') {
-    console.log('passou aqui1');
     path = isMobile ? mobilePath : desktopPath;
   }
 
   else if (isMobile && hash.startsWith('#login')) {
-    console.log('passou aqui2');
     if (page) {
       page.classList.remove("pageLayout");
       page.innerHTML = "";
@@ -21,7 +19,6 @@ function includeComponent(location, desktopPath, mobilePath) {
     return;
 
   } else {
-    console.log('passou aqui3');
     path = desktopPath;
   }
 
