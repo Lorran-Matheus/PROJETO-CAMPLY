@@ -2,12 +2,13 @@
 
 ## Lembretes: 
 
-    Aplicar Media Queries no final de cada ABA
+    Aplicar Media Queries ao final de LOGIN, INITIAL e MENU 
         - Usar media-break-min-width
 
 
 # **PAGES**
 ## LOGIN 
+    - Corrigir botão de troca de tema.
 
 > ### login-a-index
 - MOBILE
@@ -42,13 +43,17 @@
 
 
 > ### login-confirmEmail
+    - Utilizar form com inputs.
 
 > ### login-createAcc
+    - Atribuir submit corretamente no JS.
+
 
 > ### login-newPass
+    - Utilizar form com inputs.
 
 > ### login-typeCode
-
+    - Utilizar form com inputs.
 
 ## INITIAL
 > ### initial-a-index
