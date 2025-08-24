@@ -42,7 +42,7 @@ export function loadPage(pageName) {
       } else {
         const logoutBtn = document.getElementById("logout");
         if (logoutBtn) {
-          logoutBtn.removeEventListener("click", handleLogout)
+          logoutBtn.removeEventListener("click", handleLogout);
           logoutBtn.addEventListener("click", handleLogout);
         }
       }

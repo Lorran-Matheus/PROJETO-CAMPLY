@@ -8,20 +8,31 @@
     // width: 100vw;
 }
 
-.logo__create{
+.logo__create {
     position: relative;
 }
 
-.createAcc {
-    &__main{
-        @include displayFlex(column, center, center);
-        padding: 2rem;
-    }
+.createAcc__container {
+    @include displayFlex(column, center, center);
+    padding: 2rem;
 
-    &__header{
+
+    .createAcc__header {
         @include mobileLoginWidth(100%, 18rem, 28rem)
     }
 
+    .createAcc__main {
+        @include displayFlex(column, center, center);
+        padding: .3rem;
+        margin: .5rem;
+        min-width: 18rem;
+        max-width: 40rem;
+        padding: 0.3rem;
+    }
+
+}
+
+.createAcc {
     &__label {
         @include mobileLoginWidth($width: 100%, $min-width: 17rem);
         align-self: flex-start;
@@ -31,29 +42,19 @@
         align-self: flex-start;
         width: 100%;
     }
-
 }
 
-.form__createAcc {
-    @include displayFlex(column, center, center);
-    padding: .3rem;
-    margin: .5rem;
-    min-width: 18rem;
-    max-width: 40rem;
-    padding: 0.3rem;
-    
-    .close-inputs {
+.close-inputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    // @include displayFlex(row, space-between, center);
+
+    &-tel {
+        width: 90%;
+    }
+
+    &-cpf {
         width: 100%;
-        display: grid;
-        grid-template-columns: 40% 60%;
-        // @include displayFlex(row, space-between, center);
-
-        &-tel {
-            width: 90%;
-        }
-
-        &-cpf {
-            width: 100%;
-        }
     }
 }

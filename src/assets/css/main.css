@@ -391,6 +391,17 @@ a {
   text-decoration: none;
 }
 
+.newPass__input {
+  font-size: 1.3rem;
+}
+.newPass__text {
+  font-size: 3rem;
+}
+
+.login__text {
+  font-size: 1.3rem;
+}
+
 .btn__style {
   border: none;
   padding: 0.8rem;
@@ -494,7 +505,7 @@ a:active {
   max-width: 100%;
   justify-self: flex-end;
   position: relative;
-  top: -7rem;
+  top: -4rem;
   right: 2rem;
 }
 
@@ -703,6 +714,10 @@ a:active {
     padding: 0;
     width: 50vw;
   }
+  .login__container .login__title {
+    align-self: flex-start;
+    text-align: left;
+  }
   .login__container .login__text {
     align-self: flex-start;
     text-align: left;
@@ -726,7 +741,7 @@ a:active {
   top: 4rem;
 }
 
-.confirmEmail__main {
+.form__confirmEmail {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -738,6 +753,7 @@ a:active {
   position: relative;
   top: 4rem;
 }
+
 .confirmEmail__label {
   width: 30vw;
   min-width: 20rem;
@@ -772,18 +788,30 @@ a:active {
   position: relative;
 }
 
-.createAcc__main {
+.createAcc__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
 }
-.createAcc__header {
+.createAcc__container .createAcc__header {
   width: 100%;
   min-width: 18rem;
   max-width: 28rem;
 }
+.createAcc__container .createAcc__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  min-width: 18rem;
+  max-width: 40rem;
+  padding: 0.3rem;
+}
+
 .createAcc__label {
   width: 100%;
   min-width: 17rem;
@@ -795,27 +823,70 @@ a:active {
   width: 100%;
 }
 
-.form__createAcc {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.3rem;
-  margin: 0.5rem;
-  min-width: 18rem;
-  max-width: 40rem;
-  padding: 0.3rem;
-}
-.form__createAcc .close-inputs {
+.close-inputs {
   width: 100%;
   display: grid;
   grid-template-columns: 40% 60%;
 }
-.form__createAcc .close-inputs-tel {
+.close-inputs-tel {
   width: 90%;
 }
-.form__createAcc .close-inputs-cpf {
+.close-inputs-cpf {
   width: 100%;
+}
+
+.logo__container__newPass {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo__newPass {
+  align-self: center;
+  justify-self: center;
+  top: 4rem;
+}
+
+.form__newPass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 52vw;
+  min-width: 20rem;
+  max-width: 30rem;
+  position: relative;
+  gap: 1rem;
+  top: 4rem;
+}
+
+.newPass__text {
+  width: 100%;
+  min-width: 16.5rem;
+  max-width: 30rem;
+}
+.newPass__label {
+  width: 96%;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+.newPass__input {
+  width: 100%;
+  min-width: 20rem;
+  max-width: 30rem;
+}
+.newPass__link {
+  width: 96%;
+  min-width: 16.5rem;
+  max-width: 30rem;
+  justify-self: flex-start;
+}
+.newPass__btn {
+  width: 96%;
+  min-width: 20rem;
+  max-width: 30rem;
+  position: relative;
+  top: -1rem;
 }
 
 .content-login-typecode {

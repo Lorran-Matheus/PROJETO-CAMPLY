@@ -1,0 +1,39 @@
+<section id="login-newPass" class="content-login">
+    <span id="toggle-theme" class="bi bi-brightness-high xlarge-text"></span>
+
+    <div class="logo__container logo__container__newPass">
+        <!-- <img class="login__logo" id="current__logo" src="/src/assets/img/logo_light.png" alt="Logo camply"> -->
+        <img class="login__logo logo__newPass" id="current__logo"
+            src="./src/assets/img/logo_dark.png" alt="Logo camply">
+    </div>
+
+    <form action="#" method="get" id="form__register"
+        class="form__newPass align-left">
+        <p class="newPass__text align-left p-1 mb-4">
+            Crie sua nova senha
+        </p>
+        <label class="newPass__label password__container">
+                <input class="newPass__input field__style p-3" 
+                type="password" 
+                name="password" 
+                placeholder="Criar uma senha"
+                required>
+                <div class="large-text field__eye bi bi-eye-fill"></div>
+            </label>
+            <span id="passwordError" class="error"></span>
+
+            <label class="newPass__label password__container mb-5">
+                <input class="newPass__input field__style p-3" 
+                type="password" 
+                name="password" 
+                placeholder="Digite a senha novamente"
+                required>
+                <div class="large-text field__eye bi bi-eye-fill"></div>
+            </label>
+            <span id="passwordAgainError" class="error"></span>
+
+            <button id="submit"
+            class="newPass__btn submit btn btn__style large-text">Confirmar</button>
+            <p class="link__logo newPass__link large-text m-5"><a href="#login-a-index">Voltar para o Login</a></p>
+    </form>
+</section>

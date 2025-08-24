@@ -16,30 +16,29 @@
     }
 }
 
+.form__confirmEmail {
+    @include displayFlex(column, space-between, center);
+    @include mobileLoginWidth();
+    gap: 3rem;
+    position: relative;
+    top: 4rem
+}
+
 .confirmEmail {
 
-    &__main {
-        @include displayFlex(column, space-between, center);
-        @include mobileLoginWidth();
-        gap: 3rem;
-        position: relative;
-        top: 4rem
-
-    }
-
-    &__label{
+    &__label {
         @include mobileLoginWidth();
     }
 
-    &__input{
+    &__input {
         @include mobileLoginWidth();
     }
 
-    &__link{
+    &__link {
         align-self: flex-start;
     }
 
-    &__btn{
+    &__btn {
         @include mobileLoginWidth();
         position: relative;
         top: -1rem;

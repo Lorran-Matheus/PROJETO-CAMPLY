@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+@use '../at-rule/' as *;
+
+
+.logo {
+    &__container__newPass {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__newPass {
+        align-self: center;
+        justify-self: center;
+        top: 4rem;
+    }
+}
+
+.form__newPass {
+    @include displayFlex(column, center, center);
+    @include mobileLoginWidth($width: 52vw);
+    position: relative;
+    gap: 1rem;
+    top: 4rem
+}
+
+.newPass {
+    &__text {
+        @include mobileLoginWidth($width: 100%, $min-width: 16.5rem);
+    }
+
+    &__label {
+        @include mobileLoginWidth($width: 96%);
+    }
+    
+    &__input {
+        @include mobileLoginWidth($width: 100%);
+    }
+
+    &__link {
+        @include mobileLoginWidth($width: 96%, $min-width: 16.5rem);
+        justify-self: flex-start;
+    }
+
+    &__btn {
+        @include mobileLoginWidth($width: 96%);
+        position: relative;
+        top: -1rem;
+    }
+}

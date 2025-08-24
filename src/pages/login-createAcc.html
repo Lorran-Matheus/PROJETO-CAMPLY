@@ -7,18 +7,19 @@
         <p class="link__logo">Já possui uma conta? <a href="#login-a-index">Entrar</a></p>
     </div>
 
-    <div class="createAcc__main">
+    <div class="createAcc__container">
         <div class="createAcc__header p-5">
             <h1 class="xlarge-text mb-4">Crie sua conta</h1>
             <p class="mb-2">Seus dados serão privados, armazenados e criptografados com segurança.</p>
         </div>
-        <form action="#" method="get" id="form__register" class="form__createAcc">
+        <form action="#" method="get" id="form__register" class="createAcc__main">
             
             <label class="createAcc__label">
                 <input class="createAcc__input field__style mt-2 mb-3 medium-text" 
                 type="text" 
                 name="userName" 
-                placeholder="Nome / Razão social">
+                placeholder="Nome / Razão social"
+                required>
             </label>
             <span id="userNameError" class="error"></span>
 
@@ -28,7 +29,8 @@
                     maxlength="14" 
                     type="tel" 
                     name="tel" 
-                    placeholder="Telefone">
+                    placeholder="Telefone"
+                    required>
                 </label>
                 <!-- <span id="telefoneError" class="error"></span> -->
 
@@ -38,7 +40,8 @@
                     type="text" 
                     name="cpf" 
                     maxlength="11" 
-                    placeholder="CPF">
+                    placeholder="CPF"
+                    required>
                 </label>
                 <!-- <span id="cpfError" class="error"></span> -->
             </div>
@@ -47,14 +50,16 @@
                 <input class="createAcc__input field__style mt-2 mb-3 medium-text" 
                 type="email" 
                 name="email" 
-                placeholder="E-mail">
+                placeholder="E-mail"
+                required>
             </label>
 
             <label class="createAcc__label password__container">
                 <input class="createAcc__input field__style mt-3 mb-2 medium-text" 
                 type="password" 
                 name="password" 
-                placeholder="Criar uma senha">
+                placeholder="Criar uma senha"
+                required>
                 <div class="large-text field__eye bi bi-eye-fill"></div>
             </label>
             <span id="passwordError" class="error"></span>
@@ -63,7 +68,8 @@
                 <input class="createAcc__input field__style mt-3 mb-2 medium-text" 
                 type="password" 
                 name="password" 
-                placeholder="Digite a senha novamente">
+                placeholder="Digite a senha novamente"
+                required>
                 <div class="large-text field__eye bi bi-eye-fill"></div>
             </label>
             <span id="passwordAgainError" class="error"></span>

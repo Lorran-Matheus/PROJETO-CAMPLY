@@ -44,7 +44,6 @@ export function checkAuth(pageName) {
 
 export function login(event) {
   event.preventDefault();
-
   const usuario = document.getElementById('usuario');
   const senha = document.getElementById('senha');
 

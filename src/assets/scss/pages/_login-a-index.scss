@@ -89,6 +89,11 @@
         padding: 0;
         width: 50vw;
 
+        .login__title{
+            align-self: flex-start;
+            text-align: left;
+        }
+        
         .login__text {
             align-self: flex-start;
             text-align: left;
