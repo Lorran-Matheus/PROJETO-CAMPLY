@@ -2,7 +2,7 @@
 @use '../at-rule/' as *;
 
 
-.logo__login{
+.logo__login {
     position: relative
 }
 
@@ -10,97 +10,148 @@
     @include displayFlex(column, center, center);
     padding-bottom: 3rem;
     position: relative;
-    bottom: 1rem;
 
-    .login__header {
-        @include mobileLoginWidth;
-        @include displayFlex(column, center, center);
-
-
-
-        @media screen and (min-width: 769px) {
-            padding: 0;
-            margin: 0;
-            min-width: 18rem;
-
-            & {
-                @include desktopLoginWidth;
-            }
-        }
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(100vw, 90%, 90%);
     }
 
-    .login__main {
-        @include displayFlex(column, center, center);
-
-        .field__style {
-            @include mobileLoginWidth;
-        }
-
-        .forget {
-            align-self: flex-end;
-        }
-
-        .submit {
-            @include mobileLoginWidth;
-        }
-
-        .check__area {
-            align-self: flex-start;
-        }
-
-        @media screen and (min-width: 769px) {
-            & {
-                @include desktopLoginWidth;
-            }
-
-            &>label {
-                width: 18rem;
-            }
-
-            .field__style {
-                @include desktopLoginWidth;
-            }
-
-            .password__container {
-                @include desktopLoginWidth
-            }
-
-            .forget {
-                align-self: flex-end;
-            }
-
-            .submit {
-                @include desktopLoginWidth;
-            }
-
-        }
+    @include media-break-min-width(small) {
+        @include mobileLoginWidth(80vw, 60%, 80%);
     }
 
-    .login__footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 1.5rem;
-        @include mobileLoginWidth
-    }
-
-    @media screen and (min-width: 769px) {
+    @include media-break-min-width(medium) {
         padding: 0;
         width: 50vw;
+    }
+}
 
-        .login__title{
+.login__header {
+    @include displayFlex(column, center, center);
+
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(100vw, 90%, 90%);
+    }
+
+    @include media-break-min-width(small) {
+        @include mobileLoginWidth(80vw, 60%, 80%);
+    }
+
+    @include media-break-min-width(medium) {
+        padding: 0;
+        margin: 0;
+        width: 50vw;
+        min-width: 18rem;
+
+        & {
+            @include desktopLoginWidth;
+        }
+
+        .login__title {
             align-self: flex-start;
             text-align: left;
         }
-        
+
         .login__text {
             align-self: flex-start;
             text-align: left;
         }
 
-        .login__footer {
+    }
+}
+
+.login__main {
+    @include displayFlex(column, center, center);
+
+    .forget {
+        text-align: end;
+    }
+
+    .check__area:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(90vw, 90%, 100%);
+
+        // .password__container {
+        //     @include mobileLoginWidth(100vw, 90%, 90%);
+        // }
+
+        .field__style {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .submit {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .forget {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .check__area {
+            align-self: flex-start;
+            @include mobileLoginWidth(90vw, 14.3rem, 14.3rem);
+        }
+
+    }
+
+    @include media-break-min-width(small) {
+        @include mobileLoginWidth(80vw, 60%, 100%);
+
+        .field__style {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .forget {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .submit {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+    }
+
+    @include media-break-min-width(medium) {
+        & {
             @include desktopLoginWidth;
         }
+
+        &>label {
+            width: 18rem;
+        }
+
+        .field__style {
+            @include desktopLoginWidth;
+        }
+
+        .password__container {
+            @include desktopLoginWidth
+        }
+
+
+        .submit {
+            @include desktopLoginWidth;
+        }
+
+    }
+}
+
+.login__footer {
+    @include displayFlex(column, flex-start, flex-start);
+    gap: .5rem;
+
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(90vw, 90%, 100%);
+    }
+
+    @include media-break-min-width(small) {
+        @include mobileLoginWidth(80vw, 60%, 100%);
+    }
+
+    @include media-break-min-width(medium) {
+        @include desktopLoginWidth;
     }
 }

@@ -37,3 +37,8 @@
   min-width: $min-width;
   max-width: $max-width;
 }
+
+@mixin fontSize($key){
+  $size: map.get($typograph, $key);
+  font-size: $size;
+}

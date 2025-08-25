@@ -2,58 +2,59 @@
 @use '../at-rule/' as *;
 
 //inputs
-.field__style{
+.field__style {
     border: none;
     padding: .8rem;
     background-color: var(--bg-input-style);
-    
-    &::placeholder{
+
+    &::placeholder {
         color: var(--text-color-input);
     }
 
-    &:hover{
+    &:hover {
         box-shadow: inset -.5px -.5px 3px var(--bg-btn-style), inset .5px .5px 3px var(--bg-btn-style);
         filter: brightness(1.1);
     }
 
-    &:focus{
+    &:focus {
         filter: brightness(1.1);
+    }
+
+    @include media-break-min-width(xsmall){
+        padding: 1.1rem;
+    }
+
+    @include media-break-min-width(small){
+        padding: 1rem;
     }
 }
 
 //input password 
-.password__container{ 
+.password__container {
     position: relative;
     @include displayFlex(null, center, center);
 
-    .field__eye{
-        color: #000000; 
+    .field__eye {
+        color: #000000;
         position: absolute;
-        right: .5rem;
+        // right: .5rem;
         opacity: .5;
         cursor: pointer;
-    
-        &:hover{
+
+        &:hover {
             opacity: 1;
         }
     }
 
-    @media screen and (min-width: 769px) {
-        &{
-            width: 5rem;
+    @include media-break-min-width(xsmall) {
+        .field__eye {
+            right: 2.1rem;
         }
     }
-}
 
-a{
- color: var(--link-color);   
- 
-    &:hover{
-        opacity: .7;
-    }
-
-    &:active{
-        filter: saturate(2);
-        opacity: 1;
+    @include media-break-min-width(small) {
+        .field__eye {
+            right: .5rem;
+        }
     }
 }

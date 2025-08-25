@@ -32,18 +32,6 @@
 
 }
 
-.createAcc {
-    &__label {
-        @include mobileLoginWidth($width: 100%, $min-width: 17rem);
-        align-self: flex-start;
-    }
-
-    &__input {
-        align-self: flex-start;
-        width: 100%;
-    }
-}
-
 .close-inputs {
     width: 100%;
     display: grid;
@@ -56,5 +44,41 @@
 
     &-cpf {
         width: 100%;
+    }
+}
+
+.createAcc {
+    &__label {
+        @include mobileLoginWidth($width: 100%, $min-width: 17rem);
+        align-self: flex-start;
+    }
+
+    &__input {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    @include media-break-min-width(xsmall) {}
+
+    @include media-break-min-width(small) {}
+
+    @include media-break-min-width(medium) {
+        &__main {
+            @include displayFlex(column, center, center)
+        }
+
+        &__header {
+            @include desktopLoginWidth()
+        }
+
+        &__label {
+            @include desktopLoginWidth($width: 100%, $min-width: 17rem);
+            align-self: flex-start;
+        }
+
+        &__input {
+            align-self: flex-start;
+            width: 100%;
+        }
     }
 }

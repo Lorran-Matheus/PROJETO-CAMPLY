@@ -1,6 +1,19 @@
 @use '../abstracts' as *;
 @use 'mixin' as *;
 
+//                  MEDIAQ GLOBAL 
+
+//   xsmall: 0px,
+//   small: 576px,
+//   medium: 769px,
+//   large: 992px,
+//   xlarge: 1200px,
+//   xxlarge: 1400px,
+
+@include media-break-min-width(small){
+
+}
+
 @include media-break-min-width(medium) {
     body {
         @include displayFlex(row, center, center)
@@ -24,38 +37,9 @@
         width: 50vw;
     }
 
-    .createAcc {
-    &__main{
-        @include displayFlex(column, center, center)
-    }
-
-    &__header{
-        @include desktopLoginWidth()
-    }
-
-    &__label {
-        @include desktopLoginWidth($width: 100%, $min-width: 17rem);
-        align-self: flex-start;
-    }
-
-    &__input {
-        align-self: flex-start;
-        width: 100%;
-    }
-
-}
-
 }
 
 @include media-break-min-height(small) {
-    .logo__login__container {
-        height: 8rem;
-        top: 0;
-
-        img {
-            top: -4rem;
-        }
-    }
 
     .theme__icon {
         z-index: 10;

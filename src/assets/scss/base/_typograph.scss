@@ -1,3 +1,6 @@
+@use '../abstracts/' as *;
+@use '../at-rule/' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
@@ -5,42 +8,42 @@ html {
     color: var(--primary-text-color);
 }
 
-#toggle-theme {
-    font-size: 2.4rem;
-}
+#toggle-theme {font-size: 2.4rem;}
 
 .field__style {
-
-    &::placeholder {
-        color: var(--text-color-input);
-    }
+    &::placeholder {color: var(--text-color-input);}
 }
 
 .password__container {
-
-    .field__eye {
-        color: #000000;
-    }
+    .field__eye {color: #000000;}
 }
 
-a {
-    color: var(--link-color);
-}
+a {color: var(--link-color);}
 
-.typeCode__link {
-    text-decoration: none;
-}
+.typeCode__link {text-decoration: none;}
 
 .newPass {
-    &__input {
-        font-size: 1.3rem;
-    }
-
-    &__text {
-        font-size: 3rem;
-    }
+    &__input {@include fontSize(xsmall)}
+    &__text {font-size: 3rem;}
 }
 
-.login__text {
-    font-size: 1.3rem;
+.login__text {@include fontSize(xsmall)}
+
+@include media-break-min-width(xsmall) {
+    .field__style {@include fontSize(xsmall)}
+    .btn__style {@include fontSize(xsmall)}
+    a{@include fontSize(xsmall)}
+    .chech__area{@include fontSize(xsmall)}
 }
+
+@include media-break-min-width(small) {
+    .field__style {@include fontSize(small)}
+    .btn__style {@include fontSize(small)}
+    a{@include fontSize(small)}
+}
+
+@include media-break-min-width(medium) {}
+@include media-break-min-width(large) {}
+@include media-break-min-width(xlarge) {}
+@include media-break-min-width(xxlarge) {}
+
