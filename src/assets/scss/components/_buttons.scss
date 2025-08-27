@@ -35,6 +35,7 @@
     max-width: 4rem;
     align-self: flex-end;
     justify-self: flex-end;
+    z-index: 10;
 
     @include displayFlex(row, flex-end, center);
     flex-wrap: nowrap;
@@ -44,4 +45,7 @@
         cursor: pointer;
     }
 
+    @include media-break-min-width(medium){
+        grid-area: topRight;
+    }
 }

@@ -27,6 +27,10 @@
     @include media-break-min-width(small){
         padding: 1rem;
     }
+
+    @include media-break-min-width(medium){
+        padding: .75rem;
+    }
 }
 
 //input password 

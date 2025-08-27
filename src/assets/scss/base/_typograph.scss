@@ -42,8 +42,25 @@ a {color: var(--link-color);}
     a{@include fontSize(small)}
 }
 
-@include media-break-min-width(medium) {}
+@include media-break-min-width(medium) {
+    //resets
+    a{@include fontSize(xsmall)}
+    //buttons
+    .btn__style {@include fontSize(xsmall)}
+    //inputs
+    .field__style {@include fontSize(xsmall)}
+    .header__container{
+        .header__title{@include fontSize(xsmall)}
+        .header__subtitle{@include fontSize(xsmall)}
+    }
+    //login-a-index
+    .check__area{@include fontSize(xsmall)}
+    .footer__link{@include fontSize(xsmall)}
+}
+
 @include media-break-min-width(large) {}
+
 @include media-break-min-width(xlarge) {}
+
 @include media-break-min-width(xxlarge) {}
 

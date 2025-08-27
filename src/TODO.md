@@ -1,12 +1,11 @@
-    
+# [CAMPLY](https://lorran-matheus.github.io/PROJETO-CAMPLY/#login-a-index)
 
-## Próxima sessão
-
+`Próxima sessão`
+```
     - Forçar loading sempre que carregar login-a-index
+
     - Aplicar xsmall e small (Pages: confirmEmal, typeCode, newPass, createAcc)
-
-
- **DIAS CODANDO**
+```
 
 ## DIA 1 - 2
     - Criar diretório de arquivos
@@ -18,5 +17,5 @@
 
 ## DIA 6 - ...
     - MediaQ login pages (xsmall - small)
-    - MediaQ login pages (medium - large )
-    - 
+    - MediaQ login pages (medium - large)
+    - MediaQ login pages (xlarge - xxlarge)

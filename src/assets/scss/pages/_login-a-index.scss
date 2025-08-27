@@ -20,8 +20,13 @@
     }
 
     @include media-break-min-width(medium) {
-        padding: 0;
-        width: 50vw;
+        grid-area: main;
+        padding: 1rem;
+        @include mobileLoginWidth(50vw, 23rem, 80%);
+    }
+
+    @include media-break-min-width(xxlarge) {
+        @include desktopLoginWidth(50vw, 35rem, 50%);
     }
 }
 
@@ -37,14 +42,9 @@
     }
 
     @include media-break-min-width(medium) {
+        @include desktopLoginWidth(50vw, 20rem, 100%);
         padding: 0;
         margin: 0;
-        width: 50vw;
-        min-width: 18rem;
-
-        & {
-            @include desktopLoginWidth;
-        }
 
         .login__title {
             align-self: flex-start;
@@ -115,25 +115,18 @@
     }
 
     @include media-break-min-width(medium) {
-        & {
-            @include desktopLoginWidth;
-        }
-
-        &>label {
-            width: 18rem;
-        }
+        @include desktopLoginWidth(50vw, 20rem, 100%);
 
         .field__style {
-            @include desktopLoginWidth;
+            @include desktopLoginWidth(50vw, 20rem, 100%);
         }
 
         .password__container {
-            @include desktopLoginWidth
+            @include desktopLoginWidth(50vw, 20rem, 100%)
         }
 
-
         .submit {
-            @include desktopLoginWidth;
+            @include desktopLoginWidth(50vw, 20rem, 100%);
         }
 
     }
@@ -152,6 +145,6 @@
     }
 
     @include media-break-min-width(medium) {
-        @include desktopLoginWidth;
+        @include desktopLoginWidth(50vw, 20rem, 100%);
     }
 }

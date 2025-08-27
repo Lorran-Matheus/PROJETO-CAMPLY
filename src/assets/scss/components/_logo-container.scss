@@ -24,7 +24,6 @@
     }
 
     @include media-break-min-width(small) {
-        position: relative;
         width: 100vw;
         max-width: 94%;
     }

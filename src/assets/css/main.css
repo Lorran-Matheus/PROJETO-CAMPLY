@@ -278,41 +278,8 @@
   .content-login {
     height: 100vh;
   }
-  .logo__container {
-    top: -10rem;
-    width: 50vw;
-  }
-  #toggle-theme {
-    font-size: 2rem;
-  }
   .content-login-createAcc {
     width: 50vw;
-  }
-}
-@media screen and (min-height: 576px) {
-  .theme__icon {
-    z-index: 10;
-    top: 4rem;
-    left: -1rem;
-    padding: 1rem;
-  }
-}
-@media screen and (min-height: 769px) and (min-width: 992px) {
-  .logo__container {
-    height: 4rem;
-    top: -10rem;
-  }
-  .logo__container img {
-    top: -4rem;
-  }
-  #toggle-theme {
-    z-index: 10;
-    top: -6rem;
-  }
-}
-@media screen and (min-width: 300px) and (max-height: 576px) {
-  #toggle-theme {
-    top: 0;
   }
 }
 html,
@@ -417,6 +384,29 @@ a {
     font-size: 1.5rem;
   }
 }
+@media screen and (min-width: 769px) {
+  a {
+    font-size: 1.3rem;
+  }
+  .btn__style {
+    font-size: 1.3rem;
+  }
+  .field__style {
+    font-size: 1.3rem;
+  }
+  .header__container .header__title {
+    font-size: 1.3rem;
+  }
+  .header__container .header__subtitle {
+    font-size: 1.3rem;
+  }
+  .check__area {
+    font-size: 1.3rem;
+  }
+  .footer__link {
+    font-size: 1.3rem;
+  }
+}
 .btn__style {
   border: none;
   padding: 0.8rem;
@@ -445,6 +435,7 @@ a {
   max-width: 4rem;
   align-self: flex-end;
   justify-self: flex-end;
+  z-index: 10;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -454,6 +445,11 @@ a {
 #toggle-theme:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+@media screen and (min-width: 769px) {
+  #toggle-theme {
+    grid-area: topRight;
+  }
 }
 
 .field__style {
@@ -479,6 +475,11 @@ a {
 @media screen and (min-width: 576px) {
   .field__style {
     padding: 1rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .field__style {
+    padding: 0.75rem;
   }
 }
 
@@ -534,7 +535,6 @@ a {
 }
 @media screen and (min-width: 576px) {
   .logo__container {
-    position: relative;
     width: 100vw;
     max-width: 94%;
   }
@@ -551,6 +551,17 @@ a {
   .content-login {
     width: 50vw;
     height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: repeat(2, 25vw);
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "topLeft topRight" "main main";
+  }
+}
+@media screen and (min-width: 1400px) {
+  .content-login {
+    width: 60vw;
   }
 }
 
@@ -600,6 +611,14 @@ a {
     height: 100vh;
   }
 }
+@media screen and (min-width: 1400px) {
+  .header__login {
+    width: 40vw;
+  }
+  .header__login::before {
+    width: 40vw;
+  }
+}
 
 .header__container {
   padding: 2rem;
@@ -620,10 +639,7 @@ a {
 }
 @media screen and (min-width: 769px) {
   .header__container {
-    padding: 2rem;
-    position: relative;
-    top: 4rem;
-    z-index: 10;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -632,6 +648,12 @@ a {
   }
   .header__container img {
     width: 16rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .header__container {
+    gap: 10rem;
+    width: 40vw;
   }
 }
 
@@ -643,6 +665,13 @@ a {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+@media screen and (min-width: 769px) {
+  .header__text {
+    width: 100vw;
+    min-width: 50%;
+    max-width: 100%;
+  }
 }
 
 .logo__login {
@@ -673,8 +702,18 @@ a {
 }
 @media screen and (min-width: 769px) {
   .login__container {
-    padding: 0;
+    grid-area: main;
+    padding: 1rem;
     width: 50vw;
+    min-width: 23rem;
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .login__container {
+    width: 50vw;
+    min-width: 35rem;
+    max-width: 50%;
   }
 }
 
@@ -700,15 +739,11 @@ a {
 }
 @media screen and (min-width: 769px) {
   .login__header {
+    width: 50vw;
+    min-width: 20rem;
+    max-width: 100%;
     padding: 0;
     margin: 0;
-    width: 50vw;
-    min-width: 18rem;
-  }
-  .login__header {
-    width: 70vw;
-    min-width: 18rem;
-    max-width: 30rem;
   }
   .login__header .login__title {
     align-self: flex-start;
@@ -785,27 +820,24 @@ a {
 }
 @media screen and (min-width: 769px) {
   .login__main {
-    width: 70vw;
-    min-width: 18rem;
-    max-width: 30rem;
-  }
-  .login__main > label {
-    width: 18rem;
+    width: 50vw;
+    min-width: 20rem;
+    max-width: 100%;
   }
   .login__main .field__style {
-    width: 70vw;
-    min-width: 18rem;
-    max-width: 30rem;
+    width: 50vw;
+    min-width: 20rem;
+    max-width: 100%;
   }
   .login__main .password__container {
-    width: 70vw;
-    min-width: 18rem;
-    max-width: 30rem;
+    width: 50vw;
+    min-width: 20rem;
+    max-width: 100%;
   }
   .login__main .submit {
-    width: 70vw;
-    min-width: 18rem;
-    max-width: 30rem;
+    width: 50vw;
+    min-width: 20rem;
+    max-width: 100%;
   }
 }
 
@@ -832,9 +864,9 @@ a {
 }
 @media screen and (min-width: 769px) {
   .login__footer {
-    width: 70vw;
-    min-width: 18rem;
-    max-width: 30rem;
+    width: 50vw;
+    min-width: 20rem;
+    max-width: 100%;
   }
 }
 

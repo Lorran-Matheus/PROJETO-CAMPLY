@@ -28,7 +28,7 @@
         background: var(--bg-linear-login);
     }
 
-    @media screen and (max-height: 550px){
+    @media screen and (max-height: 550px) {
         display: none;
     }
 
@@ -50,6 +50,14 @@
         }
     }
 
+    @include media-break-min-width(xxlarge) {
+        width: 40vw;
+
+        &::before {
+            width: 40vw;
+        }
+    }
+
 }
 
 .header__container {
@@ -67,24 +75,21 @@
             width: 8rem;
         }
     }
-    
-    @include media-break-min-width(medium) {
-        & {
-            padding: 2rem;
-            position: relative;
-            top: 4rem;
-            z-index: 10;
 
-            @include displayFlex(column, center, center);
-            gap: 5rem;
-        }
+    @include media-break-min-width(medium) {
+        width: 50vw;
+        @include displayFlex(column, center, center);
+        gap: 5rem;
 
         img {
             width: 16rem;
         }
     }
 
-    
+    @include media-break-min-width(xxlarge) {
+        gap: 10rem;
+        width: 40vw;
+    }
 }
 
 //          desktop
@@ -94,4 +99,8 @@
 
     @include displayFlex(column, center, center);
     gap: 2rem;
+
+    @include media-break-min-width(medium) {
+        @include desktopLoginWidth(100vw, 50%, 100%);
+    }
 }
