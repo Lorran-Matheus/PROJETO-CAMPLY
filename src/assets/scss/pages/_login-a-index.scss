@@ -62,7 +62,7 @@
 .login__main {
     @include displayFlex(column, center, center);
 
-    .forget {
+    .forget__container {
         text-align: end;
     }
 
@@ -86,7 +86,7 @@
             @include mobileLoginWidth(90vw, 90%, 100%);
         }
 
-        .forget {
+        .forget__container {
             @include mobileLoginWidth(90vw, 90%, 100%);
         }
 
@@ -104,7 +104,7 @@
             @include mobileLoginWidth(80vw, 60%, 100%);
         }
 
-        .forget {
+        .forget__container {
             @include mobileLoginWidth(80vw, 60%, 100%);
         }
 

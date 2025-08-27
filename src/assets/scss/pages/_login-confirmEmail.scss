@@ -19,6 +19,7 @@
 .form__confirmEmail {
     @include displayFlex(column, space-between, center);
     @include mobileLoginWidth();
+    grid-area: main;
     gap: 3rem;
     position: relative;
     top: 4rem

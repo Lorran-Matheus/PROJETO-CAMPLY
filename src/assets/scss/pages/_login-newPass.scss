@@ -20,9 +20,8 @@
 .form__newPass {
     @include displayFlex(column, center, center);
     @include mobileLoginWidth($width: 52vw);
-    position: relative;
+    grid-area: main;
     gap: 1rem;
-    top: 4rem
 }
 
 .newPass {

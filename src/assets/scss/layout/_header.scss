@@ -79,7 +79,6 @@
     @include media-break-min-width(medium) {
         width: 50vw;
         @include displayFlex(column, center, center);
-        gap: 5rem;
 
         img {
             width: 16rem;

@@ -1,33 +1,35 @@
 @use '../abstracts' as *;
 @use '../at-rule/' as *;
 
-.content-login-typecode {
-    @include displayFlex(column, center, center);
-}
-
 .logo__container__typeCode {
-    @include displayFlex(row,center, center);
+    @include displayFlex(row, center, center);
 
-    .login__logo.typeCode__img {
+
+    .typeCode__img {
         width: 20rem;
+
+        @include media-break-min-width(medium) {
+            & {
+                width: 12rem;
+            }
+        }
     }
 }
 
-.typeCode {
+.typeCode__main {
+    @include displayFlex(column, center, center);
+    @include mobileLoginWidth(56vw, 18rem, 35rem);
+    grid-area: main;
+    gap: .5rem;
+    position: relative;
+    top: 1rem;
 
-    &__main {
-        @include displayFlex(column, center, center);
-        @include mobileLoginWidth(56vw, 18rem, 35rem);
-        gap: .5rem;
-        position: relative;
-        top: 1rem;
-    }
-
-    &__title {
+    .typeCode__title {
         @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
     }
 
-    &__container {
+
+    .typeCode__container {
         @include displayFlex(row, center, center);
         @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
 
@@ -40,15 +42,15 @@
         }
     }
 
-    &__paragraph {
+    .typeCode__paragraph {
         @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
     }
 
-    &__button {
+    .typeCode__button {
         @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
     }
 
-    &__link {
+    .typeCode__link {
         @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
         justify-self: flex-start;
     }

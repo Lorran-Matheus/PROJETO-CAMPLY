@@ -2,8 +2,7 @@
 @use '../at-rule/' as *;
 
 .content-login-createAcc {
-    @include displayFlex(column, center, center);
-    padding-bottom: 3rem;
+    // padding-bottom: 3rem;
     position: relative;
     // width: 100vw;
 }
@@ -15,6 +14,7 @@
 .createAcc__container {
     @include displayFlex(column, center, center);
     padding: 2rem;
+    grid-area: main;
 
 
     .createAcc__header {
@@ -36,7 +36,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 40% 60%;
-    // @include displayFlex(row, space-between, center);
 
     &-tel {
         width: 90%;
