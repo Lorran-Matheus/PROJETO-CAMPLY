@@ -44,8 +44,8 @@
   }
 }
 
-@each $class, $size in $text-aligns {
+@each $class, $direction in $text-aligns {
   .#{$class} {
-    text-align: $size;
+    text-align: $direction;
   }
 }

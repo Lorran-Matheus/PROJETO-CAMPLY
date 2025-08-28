@@ -5,33 +5,25 @@
     @include displayFlex(row, center, center);
 
 
-    .typeCode__img {
-        width: 20rem;
+    // .typeCode__img {
+    //     width: 20rem;
 
-        @include media-break-min-width(medium) {
-            & {
-                width: 12rem;
-            }
-        }
-    }
+    //     @include media-break-min-width(medium) {
+    //         width: 12rem;
+    //     }
+    // }
 }
 
 .typeCode__main {
     @include displayFlex(column, center, center);
-    @include mobileLoginWidth(56vw, 18rem, 35rem);
     grid-area: main;
     gap: .5rem;
-    position: relative;
-    top: 1rem;
 
-    .typeCode__title {
-        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
-    }
+
 
 
     .typeCode__container {
         @include displayFlex(row, center, center);
-        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
 
         .typeCode__input {
             margin: .2rem;
@@ -42,16 +34,75 @@
         }
     }
 
-    .typeCode__paragraph {
-        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
-    }
-
-    .typeCode__button {
-        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
-    }
-
     .typeCode__link {
-        @include mobileLoginWidth($width: 52vw, $min-width: 16.5rem);
         justify-self: flex-start;
+    }
+}
+
+//Responsividade 
+
+.typeCode__main {
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(70vw, 70%, 100%);
+
+        .typeCode__title {
+            text-align: center;
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__container {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__paragraph {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__button {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__link {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+    }
+
+    @include media-break-min-width(small) {
+        @include desktopLoginWidth(65vw, 65%, 65%)
+    }
+
+    @include media-break-min-width(medium) {
+        @include desktopLoginWidth(50vw, 20rem, 85%);
+
+        .typeCode__title {
+            text-align: center;
+            @include desktopLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__container {
+            @include desktopLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__paragraph {
+            @include desktopLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__button {
+            @include desktopLoginWidth(90vw, 90%, 100%);
+        }
+
+        .typeCode__link {
+            @include desktopLoginWidth(90vw, 90%, 100%);
+        }
+
+    }
+
+    @include media-break-min-width(xlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 80%);
+    }
+
+    @include media-break-min-width(xxlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 34.75rem);
     }
 }

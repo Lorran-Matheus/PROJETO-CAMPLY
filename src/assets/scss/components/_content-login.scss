@@ -23,5 +23,6 @@
 
     @include media-break-min-width(xxlarge) {
         width: 60vw;
+        grid-template-columns: repeat(2, 30vw);
     }
 }

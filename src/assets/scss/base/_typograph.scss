@@ -10,57 +10,98 @@ html {
 
 #toggle-theme {font-size: 2.4rem;}
 
-.field__style {
-    &::placeholder {color: var(--text-color-input);}
-}
-
-.password__container {
-    .field__eye {color: #000000;}
-}
-
 a {color: var(--link-color);}
-
-.typeCode__link {text-decoration: none;}
 
 .newPass {
     &__input {@include fontSize(xsmall)}
     &__text {font-size: 3rem;}
 }
 
-.login__text {@include fontSize(xsmall)}
 
+//                  Login Pages
 @include media-break-min-width(xsmall) {
-    .field__style {@include fontSize(xsmall)}
-    .btn__style {@include fontSize(xsmall)}
+    .field__style {&::placeholder {color: var(--text-color-input);}}
+    .password__container {.field__eye {color: #000000;}}
+
     a{@include fontSize(xsmall)}
+    //inputs
+    .btn__style {@include fontSize(xsmall)}
+    .btn2__style {font-size: 1.1rem;}
+    .field__style {font-size: 1rem;}
     .chech__area{@include fontSize(xsmall)}
+
+    .login__text {@include fontSize(xsmall)}
+
+    .confirmEmail__text{font-size: 2rem}
+    
+    .createAcc__title {font-size: 1.9rem;}
+    .createAcc__text {font-size: 1.2rem;}
+    //login-a-index
+    #forget__link{font-size: 1.6rem}
+
+    .typeCode__input {@include fontSize(small); color: var(--bg-btn-style);}
+    .typeCode__title{font-size: 1.6rem;}
+    .typeCode__paragraph{font-size: .8rem;}
 }
 
 @include media-break-min-width(small) {
     .field__style {@include fontSize(small)}
     .btn__style {@include fontSize(small)}
-    a{@include fontSize(small)}
+    a{font-size: 1.4rem}
+
+    .createAcc__title {font-size: 2.4rem;}
+    .createAcc__text {font-size: 1.4rem;}
 }
 
 @include media-break-min-width(medium) {
-    //resets
-    a{@include fontSize(xsmall)}
-    //buttons
-    .btn__style {@include fontSize(xsmall)}
-    //inputs
-    .field__style {@include fontSize(xsmall)}
+    .btn2__style {@include fontSize(xsmall)}
     .header__container{
         .header__title{@include fontSize(xsmall)}
         .header__subtitle{@include fontSize(xsmall)}
     }
     //login-a-index
-    .check__area{@include fontSize(xsmall)}
     .footer__link{@include fontSize(xsmall)}
+    #forget__link{font-size: 1.3rem}
+
+    //createAcc
+    .link__logo{font-size: 1.3rem;}
+
+    .typeCode__title{font-size: 2.3rem;}
+    .typeCode__paragraph{font-size: 1rem;}
 }
 
-@include media-break-min-width(large) {}
+@include media-break-min-width(large) {
+    //createAcc
+    .link__logo{font-size: 1.4rem;}
+}
 
-@include media-break-min-width(xlarge) {}
+@include media-break-min-width(xlarge) {
+    a{font-size: 1.6rem;}
+    //createAcc
+    .link__logo{font-size: 1.5rem;}
 
-@include media-break-min-width(xxlarge) {}
+    .typeCode__title{font-size: 2.8rem;}
+    .typeCode__paragraph{font-size: 1.2rem;}
+}
 
+//                  Initial Pages
+@include media-break-min-width(xsmall){}
+
+@include media-break-min-width(small){}
+
+@include media-break-min-width(medium){}
+
+@include media-break-min-width(large){}
+
+@include media-break-min-width(xlarge){}
+
+//                  Menu Pages
+@include media-break-min-width(xsmall){}
+
+@include media-break-min-width(small){}
+
+@include media-break-min-width(medium){}
+
+@include media-break-min-width(large){}
+
+@include media-break-min-width(xlarge){}

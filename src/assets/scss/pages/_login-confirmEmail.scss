@@ -18,30 +18,100 @@
 
 .form__confirmEmail {
     @include displayFlex(column, space-between, center);
-    @include mobileLoginWidth();
     grid-area: main;
     gap: 3rem;
-    position: relative;
-    top: 4rem
-}
 
-.confirmEmail {
-
-    &__label {
+    .form__confirmEmail__input {
         @include mobileLoginWidth();
     }
 
-    &__input {
+    .form__confirmEmail__input {
         @include mobileLoginWidth();
     }
 
-    &__link {
+    .form__confirmEmail__link {
         align-self: flex-start;
     }
 
-    &__btn {
+    .form__confirmEmail__btn {
         @include mobileLoginWidth();
         position: relative;
         top: -1rem;
+    }
+}
+
+// Responsive
+.form__confirmEmail {
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(70vw, 70%, 100%);
+
+        .confirmEmail__text {
+            text-align: center;
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .confirmEmail__input {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .confirmEmail__link {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .confirmEmail__btn {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+    }
+
+    @include media-break-min-width(small) {
+        @include mobileLoginWidth(80vw, 60%, 60%);
+
+        .confirmEmail__text {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .confirmEmail__input {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .confirmEmail__link {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .confirmEmail__btn {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+    }
+
+    @include media-break-min-width(medium) {
+        @include desktopLoginWidth(50vw, 20rem, 85%);
+
+        .confirmEmail__text {
+            text-align: left;
+            @include desktopLoginWidth(50vw, 20rem, 100%);
+        }
+
+        .confirmEmail__input {
+            @include desktopLoginWidth(50vw, 20rem, 100%)
+        }
+
+        .confirmEmail__link {
+            @include desktopLoginWidth(50vw, 20rem, 100%);
+        }
+
+        .confirmEmail__btn {
+            @include desktopLoginWidth(50vw, 20rem, 100%);
+        }
+
+    }
+
+    @include media-break-min-width(xlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 80%);
+    }
+
+    @include media-break-min-width(xxlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 34.75rem);
     }
 }

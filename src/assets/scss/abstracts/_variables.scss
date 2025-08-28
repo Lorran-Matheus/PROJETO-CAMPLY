@@ -1,3 +1,4 @@
+
 // Variaveis Globais
 $primary-text-color: #000000;
 $secondary-text-color: #ffffff;
@@ -28,8 +29,6 @@ $bg-color-typeCode: #C2C2C2;
 :root[data-theme="light"] {
   @extend %variables-theme;
 }
-
-
 
 :root[data-theme="dark"] {
   $primary-text-color: #F1F1F1;
@@ -81,4 +80,4 @@ $typograph: (
   large: 1.5rem,
   xlarge: 1.5rem,
   xxlarge: 1.5rem,
-  )
+);

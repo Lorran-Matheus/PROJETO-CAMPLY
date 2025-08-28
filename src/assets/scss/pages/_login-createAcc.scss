@@ -1,83 +1,134 @@
 @use '../abstracts' as *;
 @use '../at-rule/' as *;
 
-.content-login-createAcc {
-    // padding-bottom: 3rem;
-    position: relative;
-    // width: 100vw;
+.createAcc__container {
+    @include displayFlex(column, center, center);
+    grid-area: main;
 }
 
-.logo__create {
-    position: relative;
+.createAcc__header {
+    @include displayFlex(column, center, $align: normal);
+    gap: 1rem;
+}
+
+.createAcc__main {
+    @include displayFlex(column, center, center);
+    padding: .3rem;
+    gap: 1rem;
+
+    .createAc__label {
+        align-self: flex-start;
+    }
+
+    .close-inputs {
+        @include displayFlex(row, center, center);
+        gap: 1rem;
+    }
+
+    .createAc__input {
+        align-self: flex-start;
+        width: 100%;
+    }
+}
+
+//Responsividade 
+
+#login-createAcc {
+    @include media-break-min-width(xsmall) {
+        grid-template-rows: 15% 10% 75%;
+        grid-template-areas:
+            "topLeft topRight"
+            "mid mid"
+            "main main";
+
+        .link__logo {
+            margin: 0 3rem 3rem 0; 
+            align-self: flex-end;
+        }
+    }
+
+    @include media-break-min-width(medium) {
+        .link__logo {
+            margin-right: 3rem;
+            justify-self: flex-end;
+            grid-area: mid;
+        }
+    }
 }
 
 .createAcc__container {
-    @include displayFlex(column, center, center);
-    padding: 2rem;
-    grid-area: main;
-
-
-    .createAcc__header {
-        @include mobileLoginWidth(100%, 18rem, 28rem)
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(70vw, 70%, 100%);
+        gap: .5rem
     }
 
-    .createAcc__main {
-        @include displayFlex(column, center, center);
-        padding: .3rem;
-        margin: .5rem;
-        min-width: 18rem;
-        max-width: 40rem;
-        padding: 0.3rem;
+    @include media-break-min-width(small) {
+        @include mobileLoginWidth(80vw, 60%, 60%);
     }
-
-}
-
-.close-inputs {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-
-    &-tel {
-        width: 90%;
-    }
-
-    &-cpf {
-        width: 100%;
-    }
-}
-
-.createAcc {
-    &__label {
-        @include mobileLoginWidth($width: 100%, $min-width: 17rem);
-        align-self: flex-start;
-    }
-
-    &__input {
-        align-self: flex-start;
-        width: 100%;
-    }
-
-    @include media-break-min-width(xsmall) {}
-
-    @include media-break-min-width(small) {}
 
     @include media-break-min-width(medium) {
-        &__main {
-            @include displayFlex(column, center, center)
+        @include desktopLoginWidth(50vw, 20rem, 85%);
+    }
+
+    @include media-break-min-width(xlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 80%);
+    }
+
+    @include media-break-min-width(xxlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 34.75rem);
+    }
+}
+
+.createAcc__header {
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(70vw, 70%, 100%);
+
+        .createAcc__title {
+            width: 100%;
         }
 
-        &__header {
-            @include desktopLoginWidth()
-        }
-
-        &__label {
-            @include desktopLoginWidth($width: 100%, $min-width: 17rem);
-            align-self: flex-start;
-        }
-
-        &__input {
-            align-self: flex-start;
+        .createAcc__text {
             width: 100%;
         }
     }
+}
+
+.createAcc__main {
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(70vw, 70%, 100%);
+
+        .createAcc__label {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .createAcc__input {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .close-inputs {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+            flex-direction: column;
+            gap: 1.9rem;
+        }
+
+        .close-inputs__label {
+            width: 100%;
+
+            & .close-inputs-tel {
+                @include mobileLoginWidth(100%, 90%, 100%);
+            }
+
+            & .close-inputs-cpf {
+                @extend .close-inputs-tel;
+            }
+        }
+    }
+
+    @include media-break-min-width(small) {
+        .close-inputs {
+            flex-direction: row;
+        }
+    }
+
+    @include media-break-min-width(medium) {}
 }

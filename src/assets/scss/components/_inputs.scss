@@ -19,18 +19,6 @@
     &:focus {
         filter: brightness(1.1);
     }
-
-    @include media-break-min-width(xsmall){
-        padding: 1.1rem;
-    }
-
-    @include media-break-min-width(small){
-        padding: 1rem;
-    }
-
-    @include media-break-min-width(medium){
-        padding: .75rem;
-    }
 }
 
 //input password 
@@ -41,7 +29,6 @@
     .field__eye {
         color: #000000;
         position: absolute;
-        // right: .5rem;
         opacity: .5;
         cursor: pointer;
 
@@ -49,15 +36,34 @@
             opacity: 1;
         }
     }
+}
 
+//Responsividade 
+.field__style {
+    @include media-break-min-width(xsmall) {
+        padding: 1.1rem;
+    }
+
+    @include media-break-min-width(small) {
+        padding: 1rem;
+    }
+
+    @include media-break-min-width(medium) {
+        padding: .75rem;
+    }
+}
+
+.password__container {
     @include media-break-min-width(xsmall) {
         .field__eye {
+            display: none;
             right: 2.1rem;
         }
     }
 
     @include media-break-min-width(small) {
         .field__eye {
+            display: flex;
             right: .5rem;
         }
     }

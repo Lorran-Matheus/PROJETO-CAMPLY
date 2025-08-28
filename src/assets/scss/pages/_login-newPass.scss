@@ -2,49 +2,113 @@
 @use '../at-rule/' as *;
 
 
-.logo {
-    &__container__newPass {
-        width: 35%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__newPass {
-        align-self: center;
-        justify-self: center;
-        top: 4rem;
-    }
-}
-
 .form__newPass {
     @include displayFlex(column, center, center);
-    @include mobileLoginWidth($width: 52vw);
     grid-area: main;
     gap: 1rem;
 }
 
 .newPass {
-    &__text {
-        @include mobileLoginWidth($width: 100%, $min-width: 16.5rem);
-    }
-
-    &__label {
-        @include mobileLoginWidth($width: 96%);
-    }
-    
-    &__input {
-        @include mobileLoginWidth($width: 100%);
-    }
-
     &__link {
-        @include mobileLoginWidth($width: 96%, $min-width: 16.5rem);
         justify-self: flex-start;
     }
 
     &__btn {
-        @include mobileLoginWidth($width: 96%);
         position: relative;
         top: -1rem;
+    }
+}
+
+//Responsividade 
+
+.logo__container .logo__newPass {
+    @include media-break-min-width(xsmall) {
+        width: 20.5rem;
+    }
+
+    @include media-break-min-width(medium){
+        width: 12rem;
+    }
+}
+
+.form__newPass {
+    @include media-break-min-width(xsmall) {
+        @include mobileLoginWidth(70vw, 70%, 100%);
+
+        .newPass__text {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .newPass__label {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .newPass__input {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .newPass__link {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+
+        .newPass__btn {
+            @include mobileLoginWidth(90vw, 90%, 100%);
+        }
+    }
+
+    @include media-break-min-width(small) {
+        @include mobileLoginWidth(80vw, 60%, 60%);
+
+        .newPass__text {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .newPass__label {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .newPass__input {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .newPass__link {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+
+        .newPass__btn {
+            @include mobileLoginWidth(80vw, 60%, 100%);
+        }
+    }
+
+    @include media-break-min-width(medium) {
+        @include desktopLoginWidth(50vw, 20rem, 85%);
+
+        .newPass__text {
+            @include desktopLoginWidth(50vw, 20rem, 100%);
+        }
+
+        .newPass__label {
+            @include desktopLoginWidth(50vw, 20rem, 100%);
+        }
+
+        .newPass__input {
+            @include desktopLoginWidth(50vw, 20rem, 100%);
+        }
+
+        .newPass__link {
+            @include desktopLoginWidth(50vw, 20rem, 100%);
+        }
+
+        .newPass__btn {
+            @include desktopLoginWidth(90vw, 90%, 100%);
+        }
+    }
+
+    @include media-break-min-width(xlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 80%);
+    }
+
+    @include media-break-min-width(xxlarge) {
+        @include desktopLoginWidth(50vw, 20rem, 34.75rem);
     }
 }

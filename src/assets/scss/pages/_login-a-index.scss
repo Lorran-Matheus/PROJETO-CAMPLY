@@ -10,7 +10,33 @@
     @include displayFlex(column, center, center);
     padding-bottom: 3rem;
     position: relative;
+}
 
+.login__header {
+    @include displayFlex(column, center, center);
+}
+
+.login__main {
+    @include displayFlex(column, center, center);
+
+    .forget__container {
+        text-align: end;
+    }
+
+    .check__area:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+
+.login__footer {
+    @include displayFlex(column, flex-start, flex-start);
+    gap: .5rem;
+}
+
+// Resposividade 
+
+.login__container {
     @include media-break-min-width(xsmall) {
         @include mobileLoginWidth(100vw, 90%, 90%);
     }
@@ -60,23 +86,8 @@
 }
 
 .login__main {
-    @include displayFlex(column, center, center);
-
-    .forget__container {
-        text-align: end;
-    }
-
-    .check__area:hover {
-        cursor: pointer;
-        opacity: .8;
-    }
-
     @include media-break-min-width(xsmall) {
         @include mobileLoginWidth(90vw, 90%, 100%);
-
-        // .password__container {
-        //     @include mobileLoginWidth(100vw, 90%, 90%);
-        // }
 
         .field__style {
             @include mobileLoginWidth(90vw, 90%, 100%);
@@ -133,9 +144,6 @@
 }
 
 .login__footer {
-    @include displayFlex(column, flex-start, flex-start);
-    gap: .5rem;
-
     @include media-break-min-width(xsmall) {
         @include mobileLoginWidth(90vw, 90%, 100%);
     }

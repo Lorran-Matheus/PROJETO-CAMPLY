@@ -1,80 +1,85 @@
 <section id="login-createAcc" class="content-login content-login-createAcc">
     <span id="toggle-theme" class="bi bi-brightness-high xlarge-text"></span>
-    
-    <div class="logo__container">
-        <!-- <img class="login__logo" id="current__logo" src="/src/assets/img/logo_light.png" alt="Logo camply"> -->
-        <img class="login__logo logo__create" id="current__logo" src="./src/assets/img/logo_dark.png" alt="Logo camply">
-        <p class="link__logo">Já possui uma conta? <a href="#login-a-index">Entrar</a></p>
-    </div>
 
-    <div class="createAcc__container">
-        <div class="createAcc__header p-5">
-            <h1 class="xlarge-text mb-4">Crie sua conta</h1>
-            <p class="mb-2">Seus dados serão privados, armazenados e criptografados com segurança.</p>
+    <div class="logo__container">
+        <img class="login__logo logo__create" id="current__logo"
+            src="./src/assets/img/logo_dark.png" alt="Logo camply">
+    </div>
+    <p class="link__logo">Já possui uma conta? <a href="#login-a-index">Entrar</a></p>
+
+    <div class="createAcc__container p-4">
+        <div class="createAcc__header p-1">
+            <h1 class="createAcc__title">Crie sua conta</h1>
+            <p class="createAcc__text">Seus dados serão privados, armazenados e
+                criptografados com segurança.</p>
         </div>
-        <form action="#" method="get" id="form__register" class="createAcc__main">
-            
+        <form action="#" method="get" id="form__register"
+            class="createAcc__main">
+
             <label class="createAcc__label">
-                <input class="createAcc__input field__style mt-2 mb-3 medium-text" 
-                type="text" 
-                name="userName" 
-                placeholder="Nome / Razão social"
-                required>
+                <input class="createAcc__input field__style medium-text"
+                    type="text"
+                    name="userName"
+                    placeholder="Nome / Razão social"
+                    required>
             </label>
             <span id="userNameError" class="error"></span>
 
-            <div class="close-inputs">
+            <div class="close-inputs mb-4">
                 <label class="close-inputs__label">
-                    <input class="createAcc__input close-inputs-tel field__style mt-2 mb-3 medium-text" 
-                    maxlength="14" 
-                    type="tel" 
-                    name="tel" 
-                    placeholder="Telefone"
-                    required>
+                    <input
+                        class="createAcc__input close-inputs-tel field__style medium-text"
+                        maxlength="14"
+                        type="tel"
+                        name="tel"
+                        placeholder="Telefone"
+                        required>
                 </label>
                 <!-- <span id="telefoneError" class="error"></span> -->
 
                 <label class="close-inputs__label">
-                    <input class="createAcc__input close-inputs-cpf field__style mt-2 mb-3 medium-text" 
-                    maxlength="14" 
-                    type="text" 
-                    name="cpf" 
-                    maxlength="11" 
-                    placeholder="CPF"
-                    required>
+                    <input
+                        class="createAcc__input close-inputs-cpf field__style medium-text"
+                        maxlength="14"
+                        type="text"
+                        name="cpf"
+                        maxlength="11"
+                        placeholder="CPF"
+                        required>
                 </label>
                 <!-- <span id="cpfError" class="error"></span> -->
             </div>
 
-            <label class="createAcc__label">
-                <input class="createAcc__input field__style mt-2 mb-3 medium-text" 
-                type="email" 
-                name="email" 
-                placeholder="E-mail"
-                required>
+            <label class="createAcc__label mb-4">
+                <input class="createAcc__input field__style medium-text"
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    required>
             </label>
 
             <label class="createAcc__label password__container">
-                <input class="createAcc__input field__style mt-3 mb-2 medium-text" 
-                type="password" 
-                name="password" 
-                placeholder="Criar uma senha"
-                required>
+                <input class="createAcc__input field__style medium-text"
+                    type="password"
+                    name="password"
+                    placeholder="Criar uma senha"
+                    required>
                 <div class="large-text field__eye bi bi-eye-fill"></div>
             </label>
             <span id="passwordError" class="error"></span>
 
-            <label class="createAcc__label password__container mb-5">
-                <input class="createAcc__input field__style mt-3 mb-2 medium-text" 
-                type="password" 
-                name="password" 
-                placeholder="Digite a senha novamente"
-                required>
+            <label class="createAcc__label password__container">
+                <input class="createAcc__input field__style medium-text"
+                    type="password"
+                    name="password"
+                    placeholder="Confirme a senha"
+                    required>
                 <div class="large-text field__eye bi bi-eye-fill"></div>
             </label>
             <span id="passwordAgainError" class="error"></span>
 
-            <button class="createAcc__label submit btn__style btn">Confirmar</button>
+            <button
+                class="createAcc__label submit btn__style btn">Confirmar</button>
         </form>
     </div>
 </section>

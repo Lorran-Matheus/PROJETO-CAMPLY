@@ -16,7 +16,10 @@
         top: -4rem;
         right: 2rem;
     }
+}
 
+//Responsividade
+.logo__container {
     @include media-break-min-width(xsmall) {
         z-index: -1;
         width: 100vw;
@@ -27,5 +30,4 @@
         width: 100vw;
         max-width: 94%;
     }
-
 }
