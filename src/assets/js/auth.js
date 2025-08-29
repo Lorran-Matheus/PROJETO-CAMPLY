@@ -60,4 +60,3 @@ export function login(event) {
     alert('Login inválido');
   }
 }
-

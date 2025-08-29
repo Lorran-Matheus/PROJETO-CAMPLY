@@ -8,30 +8,40 @@ const CONFIG = {
   }
 };
 
-export function toggleTheme() {
-  const btnToggleTheme = document.getElementById("toggle-theme");
-  const html = document.documentElement;
-  const logo = document.getElementById("current__logo");
+document.addEventListener("click", (e) => {
 
-  if (!btnToggleTheme) {
-    console.log(`O valor btnToggleTheme: ${btnToggleTheme}`)                                                        // debug
-    console.warn('Elementos de alternância de tema não encontrados');
-    return;
+  //EXIBIR SENHA
+  if (e.target.id === "toggle-password") {
+    const passwordInputs = document.querySelectorAll(".password");
+
+    if (!passwordInputs.length) {
+      console.warn("Input de senha não encontrado");
+      return;
+    }
+
+    passwordInputs.forEach(input => {
+      if (input.type === "password") {
+        input.type = "text";
+      } else {
+        input.type = "password";
+      }
+    })
   }
 
-  btnToggleTheme.removeEventListener("click", handleThemeToggle);
-  btnToggleTheme.addEventListener("click", handleThemeToggle);
+  //TEMA
+  if (e.target.id === "toggle-theme") {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute("data-theme") || "light";
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    html.setAttribute("data-theme", newTheme);
 
-  function handleThemeToggle() {
-    console.log("botao clicado");                                                        // debug
-    const currentTheme = html.getAttribute('data-theme') || 'light';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const logo = document.getElementById("current__logo");
+    if (logo) {
+      logo.src = newTheme === "dark" ? "/src/assets/img/logo_dark.png" : "/src/assets/img/logo_light.png";
+    }
+  };
 
-    console.log(newTheme)                                                             // debug
-    html.setAttribute('data-theme', newTheme);
-    logo.src = CONFIG.logo[newTheme]
-  }
-}
+});
 
 function main() {
   initRouter();

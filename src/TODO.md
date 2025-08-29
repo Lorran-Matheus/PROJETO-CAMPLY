@@ -3,8 +3,8 @@
 `Próxima sessão`
 ```
     - Forçar loading sempre que carregar login-a-index
-
-    - Aplicar xsmall e small (Pages: confirmEmal, typeCode, newPass, createAcc)
+    - createAcc criar scroll no formulario e diminuir tamanho
+    - aumentar a area dos fomularios mobile
 ```
 
 ## DIA 1 - 2

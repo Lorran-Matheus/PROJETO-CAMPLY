@@ -1,4 +1,4 @@
-import { toggleTheme } from "./scripts.js";
+// import { toggleTheme } from "./scripts.js";
 import { login } from "./auth.js";
 import { handlerOtherForms } from "./forms.js";
 
@@ -52,7 +52,6 @@ export function loadPage(pageName) {
       console.error(`Erro ao carregar página ${pageName}:`, error);
     });
 
-  toggleTheme();
 }
 
 function handleLogout() {
