@@ -4,23 +4,15 @@
 .logo__container__typeCode {
     @include displayFlex(row, center, center);
 
-
-    // .typeCode__img {
-    //     width: 20rem;
-
-    //     @include media-break-min-width(medium) {
-    //         width: 12rem;
-    //     }
-    // }
+    @media screen and (max-height: 855px){
+        margin-top: 2rem;
+    }
 }
 
 .typeCode__main {
     @include displayFlex(column, center, center);
     grid-area: main;
     gap: .5rem;
-
-
-
 
     .typeCode__container {
         @include displayFlex(row, center, center);

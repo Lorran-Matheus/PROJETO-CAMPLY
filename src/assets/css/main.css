@@ -440,6 +440,9 @@ a {
   .link__logo {
     font-size: 1.3rem;
   }
+  .createAcc__title {
+    font-size: 1.7rem;
+  }
   .typeCode__title {
     font-size: 2.3rem;
   }
@@ -464,6 +467,20 @@ a {
   }
   .typeCode__paragraph {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-height: 855px) {
+  .field__style {
+    font-size: 1.2rem;
+  }
+  .createAcc__title {
+    font-size: 2rem;
+  }
+  .typeCode__title {
+    font-size: 1.8rem;
+  }
+  .typeCode__link {
+    font-size: 1.4rem;
   }
 }
 .btn__style {
@@ -613,7 +630,7 @@ a {
 }
 @media screen and (min-width: 769px) {
   .content-login {
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     display: grid;
     place-content: center;
@@ -628,6 +645,10 @@ a {
     width: 60vw;
     grid-template-columns: repeat(2, 30vw);
   }
+}
+
+.hidden {
+  display: none !important;
 }
 
 .header__login {
@@ -663,7 +684,7 @@ a {
 }
 @media screen and (min-width: 769px) {
   .header__login {
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     color: white;
     text-align: center;
@@ -672,7 +693,7 @@ a {
     flex-direction: column;
   }
   .header__login::before {
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
   }
 }
@@ -697,14 +718,9 @@ a {
   width: 11rem;
   max-width: 100%;
 }
-@media screen and (max-height: 700px) {
-  .header__container img {
-    width: 8rem;
-  }
-}
 @media screen and (min-width: 769px) {
   .header__container {
-    width: 50vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -718,6 +734,16 @@ a {
   .header__container {
     gap: 10rem;
     width: 40vw;
+  }
+}
+@media screen and (max-height: 700px) {
+  .header__container img {
+    width: 12rem;
+  }
+}
+@media screen and (max-height: 855px) {
+  .header__container {
+    gap: 6rem;
   }
 }
 
@@ -735,6 +761,11 @@ a {
     width: 100vw;
     min-width: 50%;
     max-width: 100%;
+  }
+}
+@media screen and (max-height: 855px) {
+  .header__text {
+    margin: 0;
   }
 }
 
@@ -1128,7 +1159,7 @@ a {
     grid-template-areas: "topLeft topRight" "mid mid" "main main";
   }
   #login-createAcc .link__logo {
-    margin: 0 3rem 3rem 0;
+    margin: 0 2.5rem 2.5rem 0;
     align-self: flex-end;
   }
 }
@@ -1139,27 +1170,26 @@ a {
     grid-area: mid;
   }
 }
+@media screen and (max-height: 855px) {
+  #login-createAcc .link__logo {
+    margin: 0 1rem 1rem 0;
+  }
+}
 
 @media screen and (min-width: 0px) {
   .createAcc__container {
-    width: 70vw;
-    min-width: 70%;
+    width: 85vw;
+    min-width: 85%;
     max-width: 100%;
     gap: 0.5rem;
   }
 }
 @media screen and (min-width: 576px) {
   .createAcc__container {
-    width: 80vw;
-    min-width: 60%;
-    max-width: 60%;
-  }
-}
-@media screen and (min-width: 769px) {
-  .createAcc__container {
-    width: 50vw;
-    min-width: 20rem;
-    max-width: 85%;
+    width: 85vw;
+    min-width: 70%;
+    max-width: 70%;
+    margin-bottom: 3rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1174,6 +1204,14 @@ a {
     width: 50vw;
     min-width: 20rem;
     max-width: 34.75rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-height: 855px) {
+  .createAcc__container {
+    height: 65%;
+    max-height: 70vh;
+    margin: 0;
   }
 }
 
@@ -1193,23 +1231,23 @@ a {
 
 @media screen and (min-width: 0px) {
   .createAcc__main {
-    width: 70vw;
-    min-width: 70%;
+    width: 90vw;
+    min-width: 90%;
     max-width: 100%;
   }
   .createAcc__main .createAcc__label {
-    width: 90vw;
-    min-width: 90%;
+    width: 100vw;
+    min-width: 100%;
     max-width: 100%;
   }
   .createAcc__main .createAcc__input {
-    width: 90vw;
-    min-width: 90%;
+    width: 100vw;
+    min-width: 100%;
     max-width: 100%;
   }
   .createAcc__main .close-inputs {
-    width: 90vw;
-    min-width: 90%;
+    width: 100vw;
+    min-width: 100%;
     max-width: 100%;
     flex-direction: column;
     gap: 1.9rem;
@@ -1228,6 +1266,23 @@ a {
     flex-direction: row;
   }
 }
+@media screen and (max-height: 855px) and (min-width: 769px) {
+  .createAcc__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    overflow: auto;
+    padding: 14.5rem 0.5rem 0.2rem;
+  }
+}
+@media screen and (max-height: 855px) and (min-width: 992px) {
+  .createAcc__main {
+    padding: 14.5rem 0.5rem 1.7rem;
+  }
+}
+
 .form__newPass {
   display: flex;
   flex-direction: column;
@@ -1372,6 +1427,11 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-height: 855px) {
+  .logo__container__typeCode {
+    margin-top: 2rem;
+  }
 }
 
 .typeCode__main {

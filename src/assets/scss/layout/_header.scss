@@ -1,6 +1,10 @@
 @use '../abstracts' as *;
 @use '../at-rule' as *;
 
+.hidden {
+    display: none !important;
+}
+
 //               loginLayoutMobile
 .header__login {
     width: 100vw;
@@ -35,7 +39,7 @@
 
     //              loginLayoutDesktop
     @include media-break-min-width(medium) {
-        width: 50vw; // + width (.login__container) = 100vw
+        width: 40vw; // + width (.login__container) = 100vw
         height: 100vh;
         color: white;
         text-align: center;
@@ -45,7 +49,7 @@
         flex-direction: column;
 
         &::before {
-            width: 50vw; // mesmo tamanho do elemento pai
+            width: 40vw; // mesmo tamanho do elemento pai
             height: 100vh;
         }
     }
@@ -70,14 +74,8 @@
         max-width: 100%;
     }
 
-    @media screen and (max-height: 700px) {
-        img {
-            width: 8rem;
-        }
-    }
-
     @include media-break-min-width(medium) {
-        width: 50vw;
+        width: 40vw;
         @include displayFlex(column, center, center);
 
         img {
@@ -88,6 +86,16 @@
     @include media-break-min-width(xxlarge) {
         gap: 10rem;
         width: 40vw;
+    }
+
+    @media screen and (max-height: 700px) {
+        img {
+            width: 12rem;
+        }
+    }
+
+    @media screen and (max-height: 855px) {
+        gap: 6rem;
     }
 }
 
@@ -101,5 +109,9 @@
 
     @include media-break-min-width(medium) {
         @include desktopLoginWidth(100vw, 50%, 100%);
+    }
+
+    @media screen and (max-height: 855px) {
+        margin: 0;
     }
 }

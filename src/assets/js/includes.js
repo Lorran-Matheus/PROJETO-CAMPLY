@@ -1,25 +1,27 @@
+// import { PUBLIC_ROUTES } from "./config.js";
+
 function includeComponent(location, desktopPath, mobilePath) {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  const hash = window.location.hash.toLowerCase();
-  let lastState = null;
-
-  if (lastState === isMobile) return;
-  lastState = isMobile
+  const hash = window.location.hash;
 
   const page = document.querySelector(".pageLayout");
   let path;
 
   if (hash === '#login-a-index') {
+    page.classList.remove("hidden")
     path = isMobile ? mobilePath : desktopPath;
-  } else if (isMobile && hash.startsWith('#login')) {
-    if (page) {
-      page.classList.remove("pageLayout");
-      page.innerHTML = "";
-    }
-    return;
-  } else {
-    path = desktopPath;
   }
+  
+  else if (isMobile && hash.startsWith('#login')) {
+    page.classList.add("hidden");
+    path = isMobile ? mobilePath : desktopPath;
+  }
+  
+  else if (!isMobile) {
+    page.classList.remove("hidden")
+    path = isMobile ? mobilePath : desktopPath;
+  }
+
   fetch(path)
     .then(response => {
       if (!response.ok) {
@@ -38,12 +40,13 @@ function includeComponent(location, desktopPath, mobilePath) {
 
 export function loadComponent() {
   document.addEventListener("DOMContentLoaded", () => {
-    const hash = window.location.hash.toLowerCase();
+    const hash = window.location.hash;
+
     if (hash.startsWith('#login')) {
       includeComponent(
         "pageLayout",
         "src/components/loginLayoutDesktop.html",
-        "src/components/loginLayoutMobile.html"
+        "src/components/loginLayoutMobile.html",
       );
     }
 
@@ -59,18 +62,13 @@ export function loadComponent() {
 
 function resizeTimer() {
   let resizeTimeout;
-  let lastIsMobile = null;
 
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-    // if (lastIsMobile === isMobile) return;
-    // lastIsMobile = isMobile;
 
     resizeTimeout = setTimeout(() => {
-      const hash = window.location.hash.toLowerCase();
-      if (hash.startsWith('#login')){
+      const hash = window.location.hash;
+      if (hash.startsWith('#login')) {
         includeComponent(
           "pageLayout",
           "src/components/loginLayoutDesktop.html",
