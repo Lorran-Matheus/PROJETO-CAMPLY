@@ -357,6 +357,9 @@ a {
 }
 
 @media screen and (min-width: 0px) {
+  .field__style::-moz-placeholder {
+    color: var(--text-color-input);
+  }
   .field__style::placeholder {
     color: var(--text-color-input);
   }
@@ -529,6 +532,9 @@ a {
   border: none;
   padding: 0.8rem;
   background-color: var(--bg-input-style);
+}
+.field__style::-moz-placeholder {
+  color: var(--text-color-input);
 }
 .field__style::placeholder {
   color: var(--text-color-input);
@@ -1610,6 +1616,4 @@ a {
     min-width: 20rem;
     max-width: 34.75rem;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

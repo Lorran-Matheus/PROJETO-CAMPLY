@@ -11,23 +11,31 @@
         <p class="newPass__text align-left p-1 mb-4">
             Crie sua nova senha
         </p>
-        <label class="newPass__label password__container">
+        <div class="newPass__label">
             <input class="password newPass__input field__style p-3"
+                id="createPass"
                 type="password"
                 name="password"
-                placeholder="Criar uma senha"
+                placeholder=" "
                 required>
-        </label>
+            <label for="createPass" class="">Criar uma senha</label>
+        </div>
         <span id="passwordError" class="error"></span>
 
-        <label class="newPass__label password__container mb-5">
-            <input class="password newPass__input field__style p-3"
-                type="password"
-                name="password"
-                placeholder="Confirme a senha"
-                required>
-            <div id="toggle-password" class="field__eye bi bi-eye-fill large-text"></div>
-        </label>
+        <div class="newPass__label mb-5">
+            <div class="password__container">
+                <input class="password newPass__input field__style p-3 "
+                    id="confirmPass"
+                    type="password"
+                    name="password"
+                    placeholder=" "
+                    required>
+                <div id="toggle-password"
+                    class="field__eye bi bi-eye-fill large-text"></div>
+            </div>
+            <label for="confirmPass" class>Confirme a
+                senha</label>
+        </div>
         <span id="passwordAgainError" class="error"></span>
 
         <button id="submit"

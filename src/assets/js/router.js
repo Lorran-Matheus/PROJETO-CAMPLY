@@ -25,6 +25,7 @@ export function loadPage(pageName) {
     })
     .then(html => {
       document.getElementById("content").innerHTML = html;
+    // window.location.reload(true)
       if (isPublic) {
         const form = document.querySelector("form");
         if (form) {
@@ -51,7 +52,7 @@ export function loadPage(pageName) {
       document.getElementById('content').innerHTML = '<p>Erro ao carregar a página. Tente novamente.</p>';
       console.error(`Erro ao carregar página ${pageName}:`, error);
     });
-
+    // window.location.reload(false)
 }
 
 function handleLogout() {

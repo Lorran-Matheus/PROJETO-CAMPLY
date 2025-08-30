@@ -5,7 +5,8 @@
         <img class="login__logo logo__create" id="current__logo"
             src="./src/assets/img/logo_dark.png" alt="Logo camply">
     </div>
-    <p class="link__logo">Já possui uma conta? <a href="#login-a-index">Entrar</a></p>
+    <p class="link__logo">Já possui uma conta? <a
+            href="#login-a-index">Entrar</a></p>
 
     <div class="createAcc__container p-4">
         <div class="createAcc__header p-1">
@@ -16,66 +17,82 @@
         <form action="#" method="get" id="form__register"
             class="createAcc__main">
 
-            <label class="createAcc__label">
+            <div class="createAcc__label">
                 <input class="createAcc__input field__style medium-text"
+                    id="nome"
                     type="text"
                     name="userName"
-                    placeholder="Nome / Razão social"
+                    placeholder=" "
                     required>
-            </label>
+                <label for="nome" class="labelPlaceholder">Nome / Razão
+                    social</label>
+            </div>
             <span id="userNameError" class="error"></span>
 
-            <div class="close-inputs mb-4">
-                <label class="close-inputs__label">
-                    <input
-                        class="createAcc__input close-inputs-tel field__style medium-text"
-                        maxlength="14"
-                        type="tel"
-                        name="tel"
-                        placeholder="Telefone"
-                        required>
-                </label>
-                <!-- <span id="telefoneError" class="error"></span> -->
-
-                <label class="close-inputs__label">
-                    <input
-                        class="createAcc__input close-inputs-cpf field__style medium-text"
-                        maxlength="14"
-                        type="text"
-                        name="cpf"
-                        maxlength="11"
-                        placeholder="CPF"
-                        required>
-                </label>
-                <!-- <span id="cpfError" class="error"></span> -->
+            <div class="close-inputs__label">
+                <input
+                    class="createAcc__input close-inputs-tel field__style medium-text"
+                    id="tel"
+                    maxlength="14"
+                    type="tel"
+                    name="tel"
+                    placeholder=" "
+                    required>
+                <label for="tel" class="labelPlaceholder ">Telefone</label>
             </div>
+            <span id="telefoneError" class="error"></span>
 
-            <label class="createAcc__label mb-4">
+            <div class="close-inputs__label">
+                <input
+                    class="createAcc__input close-inputs-cpf field__style medium-text"
+                    id="cpf"
+                    maxlength="14"
+                    type="text"
+                    name=" "
+                    maxlength="11"
+                    placeholder=" "
+                    required>
+                <label for="cpf" class="labelPlaceholder ">CPF</label>
+            </div>
+            <span id="cpfError" class="error"></span>
+
+            <div class="createAcc__label">
                 <input class="createAcc__input field__style medium-text"
+                    id="email"
                     type="email"
                     name="email"
-                    placeholder="E-mail"
+                    placeholder=" "
                     required>
-            </label>
+                <label for="email" class="labelPlaceholder mb-4">E-mail</label>
+            </div>
+            <span id="emailError" class="error"></span>
 
-            <label class="createAcc__label password__container">
-                <input class="password createAcc__input field__style medium-text"
+            <div class="createAcc__label">
+                <input
+                    class="password createAcc__input field__style medium-text"
+                    id="createPass"
                     type="password"
-                    id="password"
                     name="password"
-                    placeholder="Criar uma senha"
+                    placeholder=" "
                     required>
-            </label>
+                <label for="createPass" class="labelPlaceholder">Criar uma senha</label>
+            </div>
             <span id="passwordError" class="error"></span>
 
-            <label class="createAcc__label password__container">
-                <input class="password createAcc__input field__style medium-text"
-                    type="password"
-                    name="password"
-                    placeholder="Confirme a senha"
-                    required>
-                <div id="toggle-password" class="large-text field__eye bi bi-eye-fill"></div>
-            </label>
+            <div class="createAcc__label">
+                <div class="password__container">
+                    <input
+                        class="password createAcc__input field__style medium-text"
+                        id="confirmPass"
+                        type="password"
+                        name="password"
+                        placeholder=" "
+                        required>
+                    <div id="toggle-password"
+                        class="large-text field__eye bi bi-eye-fill"></div>
+                </div>
+                <label for="confirmPass" class="labelPlaceholder">Confirme a senha</label>
+            </div>
             <span id="passwordAgainError" class="error"></span>
 
             <button

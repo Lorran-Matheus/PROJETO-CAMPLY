@@ -42,7 +42,7 @@
             "main main";
 
         .link__logo {
-            margin: 0 2.5rem 2.5rem 0; 
+            margin: 0 2.5rem 2.5rem 0;
             align-self: flex-end;
         }
     }
@@ -55,9 +55,21 @@
         }
     }
 
-    @media screen and (max-height: 855px){
+    @media screen and (max-height: 855px) {
         .link__logo {
-            margin: 0 1rem 1rem 0; 
+            margin: 0 1rem 1rem 0;
+        }
+    }
+
+    @media screen and (max-height: 670px) and (max-width: 768px) {
+        .link__logo {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .link__logo {
+            display: none;
         }
     }
 }
@@ -82,11 +94,16 @@
         margin-bottom: 3rem;
     }
 
-     @media screen and (max-height: 855px){
+    @media screen and (max-height: 855px) {
         height: 65%;
         max-height: 70vh;
         margin: 0;
     }
+
+    @media screen and (max-width: 320px) {
+        @include mobileLoginWidth(95vw, 85%, 100%);
+    }
+
 }
 
 .createAcc__header {
@@ -104,7 +121,6 @@
 }
 
 .createAcc__main {
-    // border: 2px solid red;
     @include media-break-min-width(xsmall) {
         @include mobileLoginWidth(90vw, 90%, 100%);
 
@@ -140,16 +156,36 @@
             flex-direction: row;
         }
     }
+}
 
-    @media screen and (max-height: 855px) and (min-width: 769px){
+
+// OVERFLOW
+
+.createAcc__main {
+    @media screen and (max-height: 855px) {
         @include displayFlex(column, center, center);
         height: 45vh;
         overflow: auto;
-        padding: 14.5rem .5rem .2rem ;
+        padding: 14.5rem .5rem .2rem;
     }
 
-    @media screen and (max-height: 855px) and (min-width: 992px){
-        padding: 14.5rem .5rem 1.7rem ;
-        
+    @media screen and (max-height: 830px) and (max-width: 576px) {
+        padding: 19.5rem .5rem .2rem;
+    }
+
+    @media screen and (max-height: 855px) and (max-width: 576px) {
+        max-height: 40vh;
+        min-height: 23rem;
+        padding: 14.5rem .5rem .2rem;
+    }
+
+    @media screen and (max-height: 855px) and (min-width:576px) and (max-width: 769px) {
+        padding: 14.5rem .5rem .2rem;
+        min-height: 17rem;
+    }
+
+    @media screen and (max-height: 855px) and (min-width: 992px) {
+        padding: 14.5rem .5rem 1.7rem;
+
     }
 }

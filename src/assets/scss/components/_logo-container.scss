@@ -30,4 +30,10 @@
         width: 100vw;
         max-width: 94%;
     }
+
+     @media screen and (max-height: 580px){
+        img {
+            display: none;
+        }
+    }
 }

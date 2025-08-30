@@ -43,7 +43,7 @@
 // Responsive
 .form__confirmEmail {
     @include media-break-min-width(xsmall) {
-        @include mobileLoginWidth(70vw, 70%, 100%);
+        @include mobileLoginWidth(90vw, 90%, 100%);
 
         .confirmEmail__text {
             text-align: center;

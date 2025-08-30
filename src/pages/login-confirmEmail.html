@@ -11,11 +11,17 @@
         <p class="confirmEmail__text large-text">
             Confirme seu e-mail cadastrado no nosso sistema
         </p>
-        <input type="email"
-            class="confirmEmail__input field__style medium-text"
-            placeholder="Digite seu email aqui"
-            required>
-        <p class="link__logo confirmEmail__link medium-text m-1">Já possui uma conta? <a href="#login-a-index">Entrar</a></p>
-        <button id="submit" class="confirmEmail__btn submit btn btn__style m-1 medium-text">Confirmar</button>
+        <div class="confirmEmail__input">
+            <input type="email"
+                class="field__style confirmEmail__input medium-text"
+                id="confirmEmail"
+                placeholder=" "
+                required>
+            <label for="confirmEmail">Digite seu email</label>
+        </div>
+        <p class="link__logo confirmEmail__link medium-text m-1">Já possui uma
+            conta? <a href="#login-a-index">Entrar</a></p>
+        <button id="submit"
+            class="confirmEmail__btn submit btn btn__style m-1 medium-text">Confirmar</button>
     </form>
 </section>

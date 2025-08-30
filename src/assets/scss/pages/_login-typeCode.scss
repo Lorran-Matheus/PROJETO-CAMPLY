@@ -35,7 +35,7 @@
 
 .typeCode__main {
     @include media-break-min-width(xsmall) {
-        @include mobileLoginWidth(70vw, 70%, 100%);
+        @include mobileLoginWidth(90vw, 90%, 100%);
 
         .typeCode__title {
             text-align: center;
