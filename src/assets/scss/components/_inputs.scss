@@ -6,17 +6,15 @@
     border: none;
     padding: .8rem;
     background-color: var(--bg-input-style);
+    color: var(--text-color-input);
 
     &::placeholder {
         color: var(--text-color-input);
     }
 
     &:hover {
-        box-shadow: inset -.5px -.5px 3px var(--bg-btn-style), inset .5px .5px 3px var(--bg-btn-style);
-        filter: brightness(1.1);
-    }
-
-    &:focus {
+        transition: 200ms ease-in-out;
+        box-shadow: 2px 2px 10px rgba(25, 0, 255, 0.233);
         filter: brightness(1.1);
     }
 }
@@ -39,15 +37,15 @@
 //Responsividade 
 .field__style {
     @include media-break-min-width(xsmall) {
-        padding: 1.1rem;
+        padding: 1.5rem;
     }
 
-    @include media-break-min-width(small) {
-        padding: 1rem;
-    }
+    // @include media-break-min-width(small) {
+    //     // padding: 1rem;
+    // }
 
     @include media-break-min-width(medium) {
-        padding: .75rem;
+        padding: 1.1rem;
     }
 }
 
@@ -61,14 +59,14 @@
 
     @include media-break-min-width(small) {
         .field__eye {
-            color: #000;
+            color: var(--primary-text-color);
             opacity: .6;
             display: flex;
             right: .5rem;
         }
     }
 
-    @media screen and (max-height: 855px) and (max-width: 576px){
+    @media screen and (max-height: 855px) and (max-width: 576px) {
         .field__eye {
             right: .9rem;
         }

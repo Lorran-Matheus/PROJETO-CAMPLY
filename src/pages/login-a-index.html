@@ -15,28 +15,32 @@
         </div>
 
         <form action="#" method="get" id="form__login" class="login__main">
-            <input id="usuario" class="field__style mt-2 mb-3 medium-text"
-                type="text" name="email" placeholder=" " required>
-            <label for="usuario">E-mail (admin)</label>
+            <div class="container__form-items control__label">
+                <input id="usuario"
+                    class="field__style input__style"
+                    type="text" name="email" placeholder=" " required>
+                <label class="label__style " for="usuario">E-mail
+                    (admin)</label>
+            </div>
 
-            <div class="password__container">
+            <div class="password__container container__form-items control__label">
                 <input id="senha"
-                    class="password field__style mt-3 mb-2 medium-text"
+                    class="password field__style input__style "
                     type="password" name="password" placeholder=" "
                     required>
                 <div id="toggle-password"
                     class="large-text login-eye-pass bi bi-eye-fill"></div>
+                <label class="label__style" for="senha">Senha (1234)</label>
             </div>
-            <label for="senha">Senha (1234)</label>
 
-            <div class="forget__container mt-5 mb-5">
+            <div class="forget__container">
                 <a href="#login-confirmEmail" id="forget__link"
                     class="forget__link">Esqueci minha
                     senha</a>
             </div>
 
             <button type="submit"
-                class="submit btn__style btn mb-5">Entrar</button>
+                class="submit btn__style btn ">Entrar</button>
 
             <label class="check__area pt-3 pb-5">
                 <input type="checkbox"> Manter conectado

@@ -31,7 +31,13 @@
         max-width: 94%;
     }
 
-     @media screen and (max-height: 580px){
+    @media screen and (max-height: 680px) and (min-width: 769px) {
+        img {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 580px) {
         img {
             display: none;
         }

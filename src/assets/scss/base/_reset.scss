@@ -39,12 +39,18 @@ a {
 	
 	&:hover {
 		text-decoration: underline;
-		opacity: .7;
+        cursor: pointer;
+		filter: brightness(1);
+        transform: scale(1.01);
 	}
 
 	&:active {
 		filter: saturate(2);
 		opacity: 1;
+	}
+
+	:visited{
+		opacity: .7;
 	}
 }
 

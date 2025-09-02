@@ -528,6 +528,32 @@ a {
   }
 }
 
+.content-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 100%;
+}
+@media screen and (min-width: 769px) {
+  .content-login {
+    width: 60vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: repeat(2, 25vw);
+    grid-template-rows: 15% 85%;
+    grid-template-areas: "topLeft topRight" "main main";
+  }
+}
+@media screen and (min-width: 1400px) {
+  .content-login {
+    width: 60vw;
+    grid-template-columns: repeat(2, 30vw);
+  }
+}
+
 .field__style {
   border: none;
   padding: 0.8rem;
@@ -559,6 +585,23 @@ a {
 }
 .password__container .field__eye:hover {
   filter: brightness(1.4);
+}
+
+.container__style {
+  width: 90%;
+  max-width: 20em;
+  height: 2.5em;
+  position: relative;
+}
+
+.label__style {
+  position: absolute;
+  background: #000;
+  color: white;
+  left: 1em;
+  top: 0.75em;
+  cursor: text;
+  transition: top 350ms ease-in, font-size 350ms ease-in;
 }
 
 @media screen and (min-width: 0px) {
@@ -631,32 +674,6 @@ a {
 @media screen and (max-height: 580px) {
   .logo__container img {
     display: none;
-  }
-}
-
-.content-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-height: 100%;
-}
-@media screen and (min-width: 769px) {
-  .content-login {
-    width: 60vw;
-    height: 100vh;
-    display: grid;
-    place-content: center;
-    place-items: center;
-    grid-template-columns: repeat(2, 25vw);
-    grid-template-rows: 15% 85%;
-    grid-template-areas: "topLeft topRight" "main main";
-  }
-}
-@media screen and (min-width: 1400px) {
-  .content-login {
-    width: 60vw;
-    grid-template-columns: repeat(2, 30vw);
   }
 }
 

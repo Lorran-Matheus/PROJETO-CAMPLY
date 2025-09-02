@@ -18,6 +18,8 @@
 
 .login__main {
     @include displayFlex(column, center, center);
+    padding: 1rem 0 1rem 0;
+    gap: 2rem;
 
     .forget__container {
         text-align: end;
@@ -35,7 +37,7 @@
 }
 
 .login-eye-pass {
-    color: #000;
+    color: var(--primary-text-color);
     position: absolute;
     cursor: pointer;
 
@@ -64,6 +66,10 @@
 
     @include media-break-min-width(xxlarge) {
         @include desktopLoginWidth(50vw, 35rem, 50%);
+    }
+
+    @media screen and (max-height: 700px) and (min-width: 769px){
+        top: -3rem;
     }
 }
 

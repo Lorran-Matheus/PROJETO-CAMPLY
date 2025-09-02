@@ -1,0 +1,72 @@
+@use '../at-rule' as *;
+
+.container__form-items {
+    position: relative;
+    @include displayFlex(row, center, center);
+
+    &:has(.input__style:focus) .label__style {
+        color: var(--text-color);
+        z-index: 5;
+    }
+
+    & .label__style {
+        position: absolute;
+        color: var(--primary-text-color);
+        font-size: 1.3rem;
+        font-weight: 500;
+        cursor: text;
+
+        transition: top 350ms ease-in,
+            left 350ms ease-in,
+            font-size 350ms ease-in;
+    }
+}
+
+.control__label {
+    position: relative;
+}
+
+
+.input__style {
+    outline: none;
+}
+
+
+// Responsividade 
+@include media-break-min-width(xsmall) {
+    .container__form-items {
+        @include mobileLoginWidth(90w, 90%, 100%)
+    }
+
+    .label__style {
+        left: 2.5rem;
+    }
+
+    .control__label {
+        .label__style {
+            top: -1.3rem;
+        }
+    }
+}
+
+@include media-break-min-width(small) {
+    .container__form-items {
+        @include mobileLoginWidth(80vw, 60%, 100%)
+    }
+}
+
+@include media-break-min-width(medium) {
+    .container__form-items {
+        @include mobileLoginWidth(50vw, 20rem, 100%)
+    }
+
+    .control__label {
+        .label__style {
+            top: -1.1rem;
+        }
+    }
+}
+
+@include media-break-min-width(large) {}
+
+@include media-break-min-width(xlarge) {}

@@ -20,14 +20,13 @@ a {color: var(--link-color);}
 
 //                  Login Pages
 @include media-break-min-width(xsmall) {
-    .field__style {&::placeholder {color: var(--text-color-input);}}
     .password__container {.field__eye {color: #000000;}}
 
     a{@include fontSize(xsmall)}
     //inputs
     .btn__style {@include fontSize(xsmall)}
     .btn2__style {font-size: 1.1rem;}
-    .field__style {font-size: 1rem;}
+    .field__style {font-size: 1.6rem;}
     .chech__area{@include fontSize(xsmall)}
 
     .login__text {@include fontSize(xsmall)}
@@ -37,7 +36,9 @@ a {color: var(--link-color);}
     .createAcc__title {font-size: 1.9rem;}
     .createAcc__text {font-size: 1.2rem;}
     //login-a-index
-    #forget__link{font-size: 1.3rem}
+    #forget__link{@include fontSize(xsmall)}
+    .label__style{font-size: 1.5rem}
+
 
     .typeCode__input {@include fontSize(small); color: var(--bg-btn-style);}
     .typeCode__title{font-size: 1.6rem;}
@@ -45,7 +46,6 @@ a {color: var(--link-color);}
 }
 
 @include media-break-min-width(small) {
-    .field__style {@include fontSize(small)}
     .btn__style {@include fontSize(small)}
     a{font-size: 1.4rem}
 
@@ -63,7 +63,7 @@ a {color: var(--link-color);}
     .footer__link{@include fontSize(xsmall)}
 
     //createAcc
-    .link__logo{font-size: 1.3rem;}
+    .link__logo{@include fontSize(xsmall);}
     .createAcc__title{font-size: 1.7rem;}
 
     .typeCode__title{font-size: 2.3rem;}

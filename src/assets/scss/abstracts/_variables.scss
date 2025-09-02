@@ -8,7 +8,7 @@ $text-color-input-style: #090909;
 $bg-btn-style: #000C8C;
 $bg-primary-color: #ffffff;
 $bg-linear-login: linear-gradient(180deg, #001C78 38%, #0105D3 100%);
-$bg-input-style: #a7a7a7;
+$bg-input-style: #000c8c36;
 $bg-color-typeCode: #C2C2C2;
 
 
@@ -32,14 +32,17 @@ $bg-color-typeCode: #C2C2C2;
 
 :root[data-theme="dark"] {
   $primary-text-color: #F1F1F1;
+  $text-color-input-style: #ffffff;
   $link-color: #00ADFF;
   $bg-btn-style: #0666A1;
   $bg-primary-color: #021422;
   $bg-color-typeCode: #ffffff;
 
   --primary-text-color: #{$primary-text-color};
+  --text-color-input: #{$text-color-input-style};
   --link-color: #{$link-color};
   --bg-btn-style: #{$bg-btn-style};
+  --bg-input-style: #{$bg-input-style};
   --bg-primary-color: #{$bg-primary-color};
   --bg-color-typeCode: #{$bg-color-typeCode};
   @extend %variables-theme;

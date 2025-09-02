@@ -32,12 +32,39 @@
         background: var(--bg-linear-login);
     }
 
-    @media screen and (max-height: 550px) {
-        display: none;
+}
+
+.header__container {
+    padding: 2rem;
+    z-index: 4;
+    @include displayFlex(row, center, center);
+
+    img {
+        width: 11rem;
+        max-width: 100%;
+    }
+}
+
+//          desktop
+.header__text {
+    margin-top: 2rem;
+    width: 21rem;
+
+    @include displayFlex(column, center, center);
+    gap: 2rem;
+
+    @include media-break-min-width(medium) {
+        @include desktopLoginWidth(100vw, 50%, 100%);
     }
 
+    @media screen and (max-height: 855px) {
+        margin: 0;
+    }
+}
 
-    //              loginLayoutDesktop
+
+// Responsividade
+.header__login {
     @include media-break-min-width(medium) {
         width: 40vw; // + width (.login__container) = 100vw
         height: 100vh;
@@ -62,18 +89,20 @@
         }
     }
 
+    @media screen and (max-height: 550px) and (max-width: 769px){
+        display: none;
+    }
+
+    @media screen and (max-height: 700px) and (max-width: 768px) {
+        height: 45vh;
+
+        &::before {
+            height: 45vh;
+        }
+    }
 }
 
 .header__container {
-    padding: 2rem;
-    z-index: 4;
-    @include displayFlex(row, center, center);
-
-    img {
-        width: 11rem;
-        max-width: 100%;
-    }
-
     @include media-break-min-width(medium) {
         width: 40vw;
         @include displayFlex(column, center, center);
@@ -88,7 +117,7 @@
         width: 40vw;
     }
 
-    @media screen and (max-height: 700px) {
+    @media screen and (max-height: 700px){
         img {
             width: 12rem;
         }
@@ -97,21 +126,8 @@
     @media screen and (max-height: 855px) {
         gap: 6rem;
     }
-}
 
-//          desktop
-.header__text {
-    margin-top: 2rem;
-    width: 21rem;
-
-    @include displayFlex(column, center, center);
-    gap: 2rem;
-
-    @include media-break-min-width(medium) {
-        @include desktopLoginWidth(100vw, 50%, 100%);
-    }
-
-    @media screen and (max-height: 855px) {
-        margin: 0;
+    @media screen and (max-height: 650px) and (min-width: 769px){
+        gap: 3rem;
     }
 }

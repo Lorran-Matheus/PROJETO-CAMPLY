@@ -2,20 +2,27 @@
 @use '../at-rule/' as *;
 
 .btn {
+    transition: 40ms ease-in-out;
+
     &__style {
         border: none;
         padding: .8rem;
         background-color: var(--bg-btn-style);
         color: var(--btn-text-color);
+
     }
 
     &:hover {
+        box-shadow: 1px 1px 10px rgba(0, 89, 255, 0.233),
+            -1px -1px 10px rgba(0, 89, 255, 0.233);
         cursor: pointer;
-        opacity: .8;
+        filter: brightness(1);
+        transform: scale(1.01);
+
     }
 }
 
-.btn2{
+.btn2 {
     &__style {
         border: none;
         padding: .8rem;
@@ -24,8 +31,10 @@
     }
 
     &:hover {
+        box-shadow: 1px 1px 10px rgba(0, 89, 255, 0.233),
+            -1px -1px 10px rgba(0, 89, 255, 0.233);
         cursor: pointer;
-        opacity: .8;
+        transform: scale(1.01);
     }
 }
 
@@ -45,7 +54,7 @@
         cursor: pointer;
     }
 
-    @include media-break-min-width(medium){
+    @include media-break-min-width(medium) {
         grid-area: topRight;
     }
 }
